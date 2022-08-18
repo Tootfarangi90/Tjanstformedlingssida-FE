@@ -8,7 +8,7 @@ This is a horisontal ruler:
 
 <h2>Userstory002</h2>
 
-Java code:
+Java code block:
 
 ``` java
 public class MyClass {
@@ -17,3 +17,10 @@ public static void main(String[] args){
 }
 ```
 
+<h2>Userstory001</h2>
+
+Javascript code block:
+
+```javascript
+let a = "hello"
+```
