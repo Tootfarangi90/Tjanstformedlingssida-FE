@@ -2,7 +2,7 @@
 Frontend
 
 <h2>Userstory-015</h2>
-<h3>To highlight certain words in Markdown:
+<h3>To highlight certain words in Markdown is the <mark> tag:
 <mark>Do like this</mark>
 
 ## Userstory-012
