@@ -2,9 +2,37 @@
 Frontend
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h2>Userstory-015</h2>
 <h3>To highlight certain words in Markdown:
 <mark>Do like this</mark>
+=======
+
+## Userstory-012
+
+### ER diagram
+
+To create an ER write the code below in vim:
+
+\```mermaid 
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+\```
+
+The code will return this:
+
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+```
+
+
+
+>>>>>>> 2b0f2c2443768e5f8dff9da19647a76cf3d5a818
 =======
 <h2>Userstory009</h2>
 
