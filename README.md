@@ -7,7 +7,7 @@
 
 
 <h2>Userstory-015</h2>
-To highlight certain words in ==Markdown== use the &ltmark&gt tag: \n
+<h4>To highlight certain words in ==Markdown== use the &ltmark&gt tag:<h4>
 <mark>Like this</mark>
 
 ## Userstory-012
