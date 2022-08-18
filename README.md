@@ -1,8 +1,6 @@
 # Tjanstformedlingssida-FE
 Frontend
 
-<<<<<<< HEAD
-
 ## Userstory-012
 
 ### ER diagram
@@ -51,4 +49,3 @@ Javascript code block:
 ```javascript
 let a = "hello"
 ```
->>>>>>> 130e1a83ed7ea2512f63da9ea2aad5f8da757ffd
