@@ -7,7 +7,7 @@
 
 
 <h2>Userstory-015</h2>
-To highlight certain words in Markdown use the &ltmark&gt tag:
+To highlight certain words in 'Markdown' use the &ltmark&gt tag: \ni
 <mark>Like this</mark>
 
 ## Userstory-012
