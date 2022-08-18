@@ -9,7 +9,7 @@
 <h2>Userstory-015</h2>
 To highlight certain words in Markdown use the &ltmark&gt tag like this: </br>
 
-<mark>&ltmark&gtSome text&lt/mark&gt</mark></br>
+&ltmark&gtSome text&lt/mark&gt</br>
 
 (warning doesn't display in GitHub)
 
