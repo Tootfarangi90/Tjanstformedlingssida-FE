@@ -7,10 +7,9 @@
 
 
 <h2>Userstory-015</h2>
-To highlight certain words in Markdown use the &ltmark&gt tag:
+To highlight certain words in Markdown use the &ltmark&gt tag: </br>
 <mark>Like this</mark> (warning doesn't display in GitHub)
 
-`test`
 
 ## Userstory-012
 
