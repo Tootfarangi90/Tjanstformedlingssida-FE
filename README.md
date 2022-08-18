@@ -7,7 +7,7 @@
 
 
 <h2>Userstory-015</h2>
-<h5>To highlight certain words in Markdown use the \<mark\> tag:</h5>
+<h5>To highlight certain words in Markdown use the <\mark> tag:</h5>
 <mark>Like this</mark>
 
 ## Userstory-012
