@@ -113,7 +113,8 @@ Javascript code block:
 ```javascript
 let a = "hello"
 ```
-<h2>useratory008<h2>
+<h2>Userstory-008<h2>
 
-this is how you add a emoticon in Vim
-:boom: :boom: :boom: :boom:
+This is how you add a emoticon in Vim `:boom`
+Result:
+:boom: :boom: :boom:
