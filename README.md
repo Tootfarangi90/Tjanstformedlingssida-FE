@@ -1,10 +1,66 @@
+<h2>Userstory-013<h2>
+<h3>Class Diagram with Mermaid<h3>
 
-<h2>Testing testing</h2>
-Testing testing
+
+```mermaid
+classDiagram
+    Tjänstförmedlingssida <|-- Robert
+    Tjänstförmedlingssida <|-- Ayda
+    Tjänstförmedlingssida <|-- Romina
+    Tjänstförmedlingssida <|-- James
+    Tjänstförmedlingssida <|-- Abdi
+    Tjänstförmedlingssida : Front-End
+    Tjänstförmedlingssida : +React
+    Tjänstförmedlingssida: Back-end()
+    Tjänstförmedlingssida: +NodeJS()
+    class Robert{
+      + Databasexpert
+      + Gillar infinity loops
+      + Stilig
+    }
+    class Ayda{
+      +Markdown expert
+      +Bra på ställa frågor
+    }
+    class Romina{
+      +Scrumboard designer
+      +Bra på laga persisk mat
+    }
+    class James{
+      +JWT enthusiast
+      -Gillar Covid och Covid gillar honom
+    }
+    class Abdi{
+      +Gillar äta proteinbars
+      -Batteriet på hans dator tar slut fort
+    }
+```
 
 
-<h2>Testing testing2</h2>
-Testing testing2
+**Userstory-011**
+Adding a `>` followed by a space will turn text to blockquote's, looking like this:
+> Hello world!
+
+
+
+<h2>Auth sequence diagram (Test)</h2>
+
+```mermaid
+sequenceDiagram
+participant User
+participant Client
+participant API
+User->>Client: Enter username and password
+Client->>API: Sign in request
+loop Token
+API->>API: Generate token
+end
+API->>Client: Returns the JWT
+Client->>User: Gets access to secure area
+User->>Client: Keeps navigating
+Client->>API: Send JWT token on every request
+```
+
 
 <h2>Userstory-015</h2>
 To highlight certain words in Markdown use the &ltmark&gt tag like this:</br>
@@ -57,7 +113,8 @@ Javascript code block:
 ```javascript
 let a = "hello"
 ```
-<h2>useratory008<h2>
+<h2>Userstory-008<h2>
 
-this is how you add a emoticon in Vim
-:boom: :boom: :boom: :boom:
+This is how you add a emoticon in Vim `:boom`
+Result:
+:boom: :boom: :boom:
