@@ -1,0 +1,117 @@
+#form {
+    position: relative;
+    padding: 1rem;
+    margin-top: 10px;
+    border: 1px solid white;
+    width: 50%;
+    background-color: #f2f2f2;
+    backdrop-filter: blur(5px);
+   
+}
+#form h4 {
+    color: #FF5912;
+}
+
+.button {
+    background-color:#9F2B00;
+    border: 0;
+    color: #f2f2f2;
+    font-weight: bold;
+}
+.button:active{
+    background-color:#421200;
+    color: #f2f2f2;
+    transition: 0.4s;
+  }
+
+#toggle-form {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1px;
+}
+
+input{
+    background: transparent;
+    font-size: 1.3rem;
+    width: 100%;
+    border: 0;
+    border-bottom: 3px solid #421200;
+    outline: 0;
+    font-size: 1.3rem;
+    color: gray;
+    padding: 5px 0;
+    transition: border-color 0.2s;
+
+
+}
+input:focus {
+    border: 0;
+    border-bottom: 3px solid #9F2B00;   
+}
+.form_label {
+    position: absolute;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color:black;
+}
+
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  .custom-field, .error-message {
+    font-size: 14px;
+    position: relative;
+    --field-padding: 12px;
+    border-top: 20px solid transparent;
+    border-bottom: 3px solid #9F2B00;
+    margin-bottom: 24px;
+  }
+
+  .custom-field input {
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+    padding: var(--field-padding);
+  }
+
+  .custom-field .placeholder {
+    position: absolute;
+    left: 12px;
+    bottom: 50%;
+    top: 22px;  
+    transform: translateY(-50%);
+    width: calc(100% - 24px);  
+    color: #aaa;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    left: var(--field-padding);
+    width: calc(100% - (var(--field-padding) * 2));
+    transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+  }
+
+ 
+  .custom-field input:not(:placeholder-shown) + .placeholder
+  .custom-field input:focus + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+  }
+
+  .custom-field .error-message:empty {
+    opacity: 0;
+  }
