@@ -1,15 +1,5 @@
 .App {
   text-align: center;
-
-}
-.App h1, a {
-  color: #FF5912;
-}
-h1 {
-  font-size: 30px;
-}
-.App p {
-  color: #9F2B00;
 }
 
 .App-logo {
@@ -17,13 +7,20 @@ h1 {
   pointer-events: none;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header {
-  background-color: black;
-  min-height: 50vh;
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
 }
 container{
   background-color: black;
@@ -40,37 +37,21 @@ footer {
   width: 100%;
   padding-top: 10px;
 
+=======
+  font-size: calc(10px + 2vmin);
+  color: white;
+>>>>>>> 9dfcb469bff96a83deb4ff787b955b7b470b8399
 }
 
 .App-link {
-  color: #FF5912;
+  color: #61dafb;
 }
 
-.home-component {
-  max-width: 500px;
-  margin: 10px auto;
-  border: 1px solid black;
-  min-height: 500px;
-
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-nav {
-  display: flex;
-  flex-direction: row-reverse;
-  
-}
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-li, a {
-  padding: 8px;
-  text-decoration: none;
-  list-style: none;
-  
-}
-
-.som{
-  background-color: aqua;
-}
-
