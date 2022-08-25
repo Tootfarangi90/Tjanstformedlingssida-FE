@@ -6,6 +6,7 @@ export default function Footer() {
   const [text, setText] = useState("")
 
   return (
+    <footer>
     <container>
       <form>
         <input type="email" name="email" placeholder='Email' />
@@ -25,5 +26,6 @@ export default function Footer() {
      </div>
       
     </container>
+    </footer>
   )
 }

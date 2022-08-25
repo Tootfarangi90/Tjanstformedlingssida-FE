@@ -25,11 +25,21 @@ h1 {
   align-items: center;
   justify-content: center;
 }
+container{
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  justify-content: center;
+}
+input {
+
+}
 footer {
   height: 100px;
   background-color: black;
   width: 100%;
   padding-top: 10px;
+
 }
 
 .App-link {
@@ -53,8 +63,11 @@ nav ul {
   display: flex;
 }
 
-li a {
+li, a {
   padding: 8px;
+  text-decoration: none;
+  list-style: none;
+  
 }
 
 .som{
