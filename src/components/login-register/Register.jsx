@@ -43,11 +43,6 @@ const Register = () => {
     <form onSubmit={onSubmit}>
       <h4>Register</h4>
 
-      <label for="inp" class="inp">
-      <input type="text" id="inp" placeholder="&nbsp;" />
-      <span className="label">Label</span>
-      <span className="focus-bg"></span>
-      </label>
 
         <input
          type="text" 
@@ -102,7 +97,8 @@ const Register = () => {
         type="date" 
         value={birthday} 
         onChange={birthdayChanged} 
-        step="1" />
+        step="1" 
+        placeholder=''/>
         <button className='button'>Skapa konto</button>
     </form>
         </section>
