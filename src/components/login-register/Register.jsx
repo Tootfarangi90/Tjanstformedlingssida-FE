@@ -57,6 +57,7 @@ const Register = () => {
     <form onSubmit={registerUser}>
       <h4>Register</h4>
 
+<div className="input-group">
 
         <input
          type="text" 
@@ -66,6 +67,7 @@ const Register = () => {
          onChange={firstnameChanged} 
          />
 
+         </div>
 
         <input 
         type="text" 
@@ -74,6 +76,7 @@ const Register = () => {
         placeholder="Lastname"
         onChange={lastnameChanged}  
         />
+<div className="input-group">
 
         <input 
         type="email" 
@@ -82,6 +85,8 @@ const Register = () => {
         placeholder="Email"
         onChange={emailChanged}  
         />
+        </div>
+        <div className="input-group">
 
         <input 
         type="password" 
@@ -91,6 +96,10 @@ const Register = () => {
         onChange={passwordChanged }  
         />
 
+        </div>
+
+        <div className="input-group">
+
         <input 
         type="password" 
         name='password2' 
@@ -99,21 +108,29 @@ const Register = () => {
         onChange={password2Changed}  
         />
 
+        </div>
+
+        <div className="input-group">
         <input 
         type="text" 
+        
         name="occupation" 
         value={occupation} 
         placeholder="occupation"
         onChange={occupationChanged}  
         />
         
+        </div>
+        <div className="input-group">
         <input 
-        type="date" 
-        value={birthday} 
-        onChange={birthdayChanged} 
-        step="1" 
-        placeholder=''/>
-        <button className='button'>Skapa konto</button>
+          
+          type="date" 
+          value={birthday} 
+          onChange={birthdayChanged} 
+          step="1" 
+          />
+          </div>
+        <button type="submit" className='button'>Skapa konto</button>
     </form>
         </section>
 
