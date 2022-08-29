@@ -57,7 +57,7 @@ input:focus {
 }
 
 
-
+/* 
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -114,4 +114,4 @@ input:focus {
 
   .custom-field .error-message:empty {
     opacity: 0;
-  }
+  } */

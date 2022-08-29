@@ -9,7 +9,7 @@ const Register = () => {
     const [occupation, setOccupation]   = useState('')
     const [password, setPassword]       = useState('')
     const [password2, setPassword2]     = useState('')
-    const [error, setError]             = useState("");
+    const [error, setError]             = useState('')
 
     const firstnameChanged  = (e) => setFirstname(e.target.value)
     const lastnameChanged   = (e) => setLastname(e.target.value)
@@ -19,17 +19,31 @@ const Register = () => {
     const occupationChanged = (e) => setOccupation(e.target.value)
     const birthdayChanged   = (e) => setBirthday(e.target.value)
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        setFirstname("")
-        setLastname("")
-        setEmail("")
-        setPassword("")
-        setPassword2("")
-        setOccupation("")
-        setBirthday("")
 
+   async function registerUser(e) {
+    e.preventDefault()
+    
+    try {
+      const res = await fetch("http://localhost:8080/register", {
+
+        method: "POST",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify({email, password})
+      })
+      
+      const data = await res.json()
+      console.log(data.status)
+      console.log(data)
+      
+      if(data.status === 200) {
+        console.log(data.users)
+        alert("Welcome")
+      }
+    } catch (error) {
+      console.log(error)
+      
     }
+   }
 
   return (
 
@@ -40,14 +54,9 @@ const Register = () => {
         <button id="login" className='button' onClick={() => console.log("Hello World")}>Logga in</button>
       </div>
 
-    <form onSubmit={onSubmit}>
+    <form onSubmit={registerUser}>
       <h4>Register</h4>
 
-      <label for="inp" class="inp">
-      <input type="text" id="inp" placeholder="&nbsp;" />
-      <span className="label">Label</span>
-      <span className="focus-bg"></span>
-      </label>
 
         <input
          type="text" 
@@ -102,7 +111,8 @@ const Register = () => {
         type="date" 
         value={birthday} 
         onChange={birthdayChanged} 
-        step="1" />
+        step="1" 
+        placeholder=''/>
         <button className='button'>Skapa konto</button>
     </form>
         </section>
