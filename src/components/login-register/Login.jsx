@@ -60,7 +60,7 @@ const Login = () => {
 
      
           <fieldset>
-          <legend>Email</legend>
+          <legend>Lösenord</legend>
              <input 
                type="password" 
                name='password' 
