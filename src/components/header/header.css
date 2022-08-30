@@ -9,7 +9,7 @@
 
 .logoContainer {
     grid-row: 1 / 3; 
-    grid-column: 2 / 9; 
+    grid-column: 2 / 8; 
 }
 
 #logo {
@@ -32,4 +32,12 @@
     color: #FF5912;
     justify-content: space-around;
     
+}
+
+.linkContainer {
+    grid-row: 6;
+    grid-column: 11 / -1;
+    display: flex;
+    color: #FF5912;
+    justify-content: space-around;
 }

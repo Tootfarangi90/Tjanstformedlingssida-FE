@@ -5,10 +5,14 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
 import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
 import Footer from "./components/footer/footer"
+import Header from "./components/header/Header"
+
+
+
+
 
 const Home = () => {
   return(
@@ -19,26 +23,7 @@ const Home = () => {
   )
 }
 
-const Header = () => {
-  return(
 
-    <header className='App-header'>
-      <nav>
-        <ul>
-          <li><a href="http://localhost:3000/" className="App-link">Home</a></li>
-          <li><a href="http://localhost:3000/login" className="App-link">Login</a></li>
-          <li><a href="http://localhost:3000/register" className="App-link" >Register</a></li>
-          <li><a href="#" className="App-link">Skriv er länk</a></li>
-          <li><a href="#" className="App-link">Skriv er länk</a></li>
-        </ul>
-      </nav>
-      <div>
-      <h1>AKUTRAKETEN</h1>
-      <p>This is a header</p>
-      </div>
-    </header>
-    )
-}
 
 // const Footer = () => {
 //   const [mail, setMail] = useState("")

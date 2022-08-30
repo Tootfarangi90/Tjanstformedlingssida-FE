@@ -27,8 +27,17 @@ const Header = () => {
       <section className='droplistContainer'>
 
       </section>
-      
-
+      <section className='linkContainer'>
+        <nav>
+          <ul>
+            <li><a href="http://localhost:3000/" className="App-link">Home</a></li>
+            <li><a href="http://localhost:3000/login" className="App-link">Login</a></li>
+            <li><a href="http://localhost:3000/register" className="App-link" >Register</a></li>
+            <li><a href="#" className="App-link">Skriv er länk</a></li>
+            <li><a href="#" className="App-link">Skriv er länk</a></li>
+          </ul>
+        </nav>
+      </section>
     </div>
   )
 }
