@@ -10,45 +10,57 @@ const Login = () => {
     const emailChanged = (e) => setEmail(e.target.value)
     const passwordChanged = (e) => setPassword(e.target.value)
 
-    const onSubmit = (e) => {
-        setEmail(email)
-        setPassword(password)
+    async function loginUser (e) {
+      e.preventDefault()
+
+      try {
+        const res = await fetch("http://localhost:8080/login", {
+          method: "POST",
+          headers: {"Content-type": "application/json"},
+          body: JSON.stringify({email, password})
+        })
+        console.log(res.status)
+        alert(res.status )
+
+        const data = await res.json()
+        console.log(data.status)
+        alert(data.status)
+
+      } catch (error) {
+        console.log("Error:" + error)
+        
+      }
+
     }
     
 
   return (
+    
     <>
 
-     <label class="custom-field" aria-label="Enter Email">
-     
-        <input type="email" placeholder="email@mail.com" required/>
-        <span class="error-message" aria-live="polite"></span>
-     </label>
 
-    <sektion id="form">
-
-      <div id="toggle-form">
-        <button id="register" className='button' onClick={() => console.log("Hello World")}>Skapa konto</button>
-
+    <fieldset>
+        <legend>Logga in</legend>
+      <div>
+        <button id="register" className='button' onClick={() => console.log("Skapa konto")}>Skapa konto</button>
       </div>
 
+      <form onSubmit={loginUser}>
 
-      <form onSubmit={onSubmit}>
-        <h4>Välkommen tillbaka!</h4>
-          <div className="input-field">
-            <label for="email" className='form_label'>Email</label>
+            <fieldset>
+            <legend>Email</legend>
               <input 
                 type="email" 
                 name='email' 
-                value={email} 
-                placeholder="&nbsp;"
+                value={email}
                 onChange={emailChanged}
                 required={true}
-              />
-          </div>
+                />
+                </fieldset>
+
      
-          <div className="input-field">
-            <label for="password" className='form_label'></label>
+          <fieldset>
+          <legend>Lösenord</legend>
              <input 
                type="password" 
                name='password' 
@@ -57,20 +69,16 @@ const Login = () => {
                onChange={passwordChanged}
                required={true}
               />
-              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-          </div>
+          </fieldset>
     
 
-        <button className='button'>Logga in</button>
+        <button type="submit" className='button'>Logga in</button>
     </form>
-        </sektion>
+        </fieldset>
 
     <p>This is my email: {email}</p>
     <p>This is my password{password}</p>
 
-    <div>
-
-</div>
     </>
   )
 }

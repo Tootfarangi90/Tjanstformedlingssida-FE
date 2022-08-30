@@ -9,7 +9,7 @@ const Register = () => {
     const [occupation, setOccupation]   = useState('')
     const [password, setPassword]       = useState('')
     const [password2, setPassword2]     = useState('')
-    const [error, setError]             = useState("");
+    const [error, setError]             = useState('')
 
     const firstnameChanged  = (e) => setFirstname(e.target.value)
     const lastnameChanged   = (e) => setLastname(e.target.value)
@@ -19,17 +19,31 @@ const Register = () => {
     const occupationChanged = (e) => setOccupation(e.target.value)
     const birthdayChanged   = (e) => setBirthday(e.target.value)
 
-    const onSubmit = (e) => {
-        e.preventDefault();
-        setFirstname("")
-        setLastname("")
-        setEmail("")
-        setPassword("")
-        setPassword2("")
-        setOccupation("")
-        setBirthday("")
 
+   async function registerUser(e) {
+    e.preventDefault()
+    
+    try {
+      const res = await fetch("http://localhost:8080/register", {
+
+        method: "POST",
+        headers: {"Content-type": "application/json"},
+        body: JSON.stringify({email, password})
+      })
+      
+      const data = await res.json()
+      console.log(data.status)
+      console.log(data)
+      
+      if(data.status === 200) {
+        console.log(data.users)
+        alert("Welcome")
+      }
+    } catch (error) {
+      console.log(error)
+      
     }
+   }
 
   return (
 
@@ -40,14 +54,10 @@ const Register = () => {
         <button id="login" className='button' onClick={() => console.log("Hello World")}>Logga in</button>
       </div>
 
-    <form onSubmit={onSubmit}>
+    <form onSubmit={registerUser}>
       <h4>Register</h4>
 
-      <label for="inp" class="inp">
-      <input type="text" id="inp" placeholder="&nbsp;" />
-      <span className="label">Label</span>
-      <span className="focus-bg"></span>
-      </label>
+<div className="input-group">
 
         <input
          type="text" 
@@ -57,6 +67,7 @@ const Register = () => {
          onChange={firstnameChanged} 
          />
 
+         </div>
 
         <input 
         type="text" 
@@ -65,6 +76,7 @@ const Register = () => {
         placeholder="Lastname"
         onChange={lastnameChanged}  
         />
+<div className="input-group">
 
         <input 
         type="email" 
@@ -73,6 +85,8 @@ const Register = () => {
         placeholder="Email"
         onChange={emailChanged}  
         />
+        </div>
+        <div className="input-group">
 
         <input 
         type="password" 
@@ -82,6 +96,10 @@ const Register = () => {
         onChange={passwordChanged }  
         />
 
+        </div>
+
+        <div className="input-group">
+
         <input 
         type="password" 
         name='password2' 
@@ -90,20 +108,29 @@ const Register = () => {
         onChange={password2Changed}  
         />
 
+        </div>
+
+        <div className="input-group">
         <input 
         type="text" 
+        
         name="occupation" 
         value={occupation} 
         placeholder="occupation"
         onChange={occupationChanged}  
         />
         
+        </div>
+        <div className="input-group">
         <input 
-        type="date" 
-        value={birthday} 
-        onChange={birthdayChanged} 
-        step="1" />
-        <button className='button'>Skapa konto</button>
+          
+          type="date" 
+          value={birthday} 
+          onChange={birthdayChanged} 
+          step="1" 
+          />
+          </div>
+        <button type="submit" className='button'>Skapa konto</button>
     </form>
         </section>
 

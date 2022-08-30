@@ -8,6 +8,7 @@ import {
 
 import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
+import Footer from "./components/footer/footer"
 
 const Home = () => {
   return(
@@ -39,33 +40,33 @@ const Header = () => {
     )
 }
 
-const Footer = () => {
-  const [mail, setMail] = useState("")
-  const [subject, setSubject] = useState("")
-  const [text, setText] = useState("")
+// const Footer = () => {
+//   const [mail, setMail] = useState("")
+//   const [subject, setSubject] = useState("")
+//   const [text, setText] = useState("")
 
-return(
-  <container>
-  <form>
-    <input type="email" name="email" placeholder='Email' />
-    <input type="text" name="subject" placeholder='Subject' />
-    <textarea name="text" id="" cols="30" rows="10"></textarea>
+// return(
+//   <container>
+//   <form>
+//     <input type="email" name="email" placeholder='Email' />
+//     <input type="text" name="subject" placeholder='Subject' />
+//     <textarea name="text" id="" cols="30" rows="10"></textarea>
 
-  </form>
+//   </form>
 
- <div className="socialContainer">
- <ul>
-    <li> <a href="Instagram"> Instagram</a> </li>
-    <li> <a href="Instagram"> Instagram</a> </li>
-    <li> <a href="Instagram"> Instagram</a> </li>
-    <li> <a href="Instagram"> Instagram</a> </li>
-    <li> <a href="Instagram"> Instagram</a> </li>
-  </ul>
- </div>
+//  <div className="socialContainer">
+//  <ul>
+//     <li> <a href="Instagram"> Instagram</a> </li>
+//     <li> <a href="Instagram"> Instagram</a> </li>
+//     <li> <a href="Instagram"> Instagram</a> </li>
+//     <li> <a href="Instagram"> Instagram</a> </li>
+//     <li> <a href="Instagram"> Instagram</a> </li>
+//   </ul>
+//  </div>
   
-</container>
-)
-}
+// </container>
+// )
+// }
 
 function App() {
   return (
