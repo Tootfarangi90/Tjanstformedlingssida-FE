@@ -7,11 +7,15 @@ Som köpare kan man söka på tjänster och kontakta tjänsteutövarna genom att
 ## Onboarding
 Det här vår [Trello sprintboard](https://trello.com/b/bv0EIPpR/tj%C3%A4nstf%C3%B6rmedlingssida)
 
-# The coding languages we use:
-React
-Jest for testing
-We recommend Visual studio code as an editor
-Run NPM i to install all current module packages
+    # The coding languages we use:
+    React
+    Jest for testing
+
+    # Instructions
+    We recommend Visual studio code as an editor
+    npm start
+    Clone repo
+    Run NPM i to install all current module packages
 
 
 <h3>Class Diagram over project developers<h3>
