@@ -13,9 +13,9 @@ Det här vår [Trello sprintboard](https://trello.com/b/bv0EIPpR/tj%C3%A4nstf%C3
 
     # Instructions
     We recommend Visual studio code as an editor
-    npm start
     Clone repo
     Run NPM i to install all current module packages
+    npm start
 
 
 <h3>Class Diagram over project developers<h3>
