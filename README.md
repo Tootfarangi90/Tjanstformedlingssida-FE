@@ -1,4 +1,19 @@
-<h2>Userstory-013<h2>
+# Vårt projekt:
+Vårt projekt är en tjänstförmedlingssida. Man ska som tjänstutövare kunna skapa en profil för att lägga upp sina tjänster.
+Som köpare kan man söka på tjänster och kontakta tjänsteutövarna genom att skicka kontaktförfrågningar.
+
+
+
+## Onboarding
+Det här vår [Trello sprintboard](https://trello.com/b/bv0EIPpR/tj%C3%A4nstf%C3%B6rmedlingssida)
+
+#The coding languages we use:
+React
+Jest for testing
+We recommend Visual studio code as an editor
+Run NPM i to install all current module packages
+
+
 <h3>Class Diagram with Mermaid<h3>
 
 
@@ -35,86 +50,3 @@ classDiagram
       -Batteriet på hans dator tar slut fort
     }
 ```
-
-
-**Userstory-011**
-Adding a `>` followed by a space will turn text to blockquote's, looking like this:
-> Hello world!
-
-
-
-<h2>Auth sequence diagram (Test)</h2>
-
-```mermaid
-sequenceDiagram
-participant User
-participant Client
-participant API
-User->>Client: Enter username and password
-Client->>API: Sign in request
-loop Token
-API->>API: Generate token
-end
-API->>Client: Returns the JWT
-Client->>User: Gets access to secure area
-User->>Client: Keeps navigating
-Client->>API: Send JWT token on every request
-```
-
-
-<h2>Userstory-015</h2>
-To highlight certain words in Markdown use the &ltmark&gt tag like this:</br>
-<mark>&ltmark&gtSome text&lt/mark&gt</mark></br>
-(warning doesn't display in GitHub)
-
-
-## Userstory-012
-
-### ER diagram
-
-To create an ER write the code below in vim:
-
-\```mermaid 
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-\```
-
-The code will return this:
-
-```mermaid
-erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
-```
-
-<h2>Userstory009</h2>
-
-This is a horisontal ruler:
-<hr />
-
-<h2>Userstory002</h2>
-
-Java code block:
-
-``` java
-public class MyClass {
-public static void main(String[] args){
-}
-}
-```
-
-<h2>Userstory001</h2>
-
-Javascript code block:
-
-```javascript
-let a = "hello"
-```
-<h2>Userstory-008<h2>
-
-This is how you add a emoticon in Vim `:boom`
-Result:
-:boom: :boom: :boom:
