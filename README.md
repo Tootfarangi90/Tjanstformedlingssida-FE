@@ -2,6 +2,15 @@
 Vårt projekt är en tjänstförmedlingssida. Man ska som tjänstutövare kunna skapa en profil för att lägga upp sina tjänster.
 Som köpare kan man söka på tjänster och kontakta tjänsteutövarna genom att skicka kontaktförfrågningar.
 
+| # Our   |      # Weekly      |  # Plans |
+|----------|-------------|------|
+| Dag |  Tid | Plats |
+| Måndag |    10.00   |   Stan |
+| Tisdag |    09.00   |   Skolan |
+| Onsdag |    10.00   |   Online/discord |
+| Torsdag |   09.00   |   Skolan |
+| Fredag |    13.00   |   Online |
+
 
 
 ## Onboarding
