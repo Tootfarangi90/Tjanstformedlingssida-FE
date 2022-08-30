@@ -14,7 +14,7 @@ We recommend Visual studio code as an editor
 Run NPM i to install all current module packages
 
 
-<h3>Class Diagram with Mermaid<h3>
+<h3>Class Diagram over project developers<h3>
 
 
 ```mermaid
