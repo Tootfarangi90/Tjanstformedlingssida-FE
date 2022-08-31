@@ -42,7 +42,7 @@ const Login = () => {
     <fieldset>
         <legend>Logga in</legend>
       <div>
-        <button id="register" className='button' onClick={() => console.log("Skapa konto")}>Skapa konto</button>
+        <button id="register" className='button' onClick={() => console.log("Skapa konto!")}>Skapa konto</button>
       </div>
 
       <form onSubmit={loginUser}>
