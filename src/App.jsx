@@ -57,7 +57,7 @@ function App() {
   return (
     <div className="App">
     <Header />
-{/* 
+
     <Router>
       <div>
         <h1>This is the router</h1>
@@ -67,7 +67,7 @@ function App() {
           <Route path="/register" element={<Register />} />
         </Routes>
       </div>
-    </Router> */}
+    </Router>
 <Footer />
     </div>
   );
