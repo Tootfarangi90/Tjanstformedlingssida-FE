@@ -54,7 +54,7 @@ const Login = () => {
                 name='email' 
                 value={email}
                 onChange={emailChanged}
-                required={true}
+                required
                 />
                 </fieldset>
 
@@ -67,7 +67,7 @@ const Login = () => {
                value={password} 
                placeholder="Lösenord" 
                onChange={passwordChanged}
-               required={true}
+               required
               />
           </fieldset>
     

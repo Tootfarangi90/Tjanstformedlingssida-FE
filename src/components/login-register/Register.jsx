@@ -25,10 +25,9 @@ const Register = () => {
     
     try {
       const res = await fetch("http://localhost:8080/register", {
-
         method: "POST",
         headers: {"Content-type": "application/json"},
-        body: JSON.stringify({email, password})
+        body: JSON.stringify({firstname, lastname, email, password, birthday, password, occupation})
       })
       
       const data = await res.json()
@@ -65,6 +64,7 @@ const Register = () => {
          value={firstname} 
          placeholder="firstname"
          onChange={firstnameChanged} 
+         required
          />
 
          </div>
@@ -74,7 +74,8 @@ const Register = () => {
         name='lastname' 
         value={lastname} 
         placeholder="Lastname"
-        onChange={lastnameChanged}  
+        onChange={lastnameChanged}
+        required  
         />
 <div className="input-group">
 
@@ -83,7 +84,8 @@ const Register = () => {
         name='email' 
         value={email} 
         placeholder="Email"
-        onChange={emailChanged}  
+        onChange={emailChanged}
+        required  
         />
         </div>
         <div className="input-group">
@@ -93,7 +95,8 @@ const Register = () => {
         name='password' 
         value={password} 
         placeholder="Password"
-        onChange={passwordChanged }  
+        onChange={passwordChanged}
+        required  
         />
 
         </div>
@@ -105,7 +108,8 @@ const Register = () => {
         name='password2' 
         value={password2} 
         placeholder="Confirm password"
-        onChange={password2Changed}  
+        onChange={password2Changed}
+        required  
         />
 
         </div>
@@ -117,30 +121,17 @@ const Register = () => {
         name="occupation" 
         value={occupation} 
         placeholder="occupation"
-        onChange={occupationChanged}  
+        onChange={occupationChanged}
+        required  
         />
         
         </div>
         <div className="input-group">
-        <input 
-          
-          type="date" 
-          value={birthday} 
-          onChange={birthdayChanged} 
-          step="1" 
-          />
+
           </div>
         <button type="submit" className='button'>Skapa konto</button>
     </form>
         </section>
-
-    <p>Firstname: {firstname}</p>
-    <p>LastName: {lastname}</p>
-    <p>Email: {email}</p>
-    <p>Occupation: {occupation}</p>
-    <p>Password: {password}</p>
-    <p>Password2: {password2}</p>
-    <p>Birthday: {birthday}</p>
     </>
   )
 }
