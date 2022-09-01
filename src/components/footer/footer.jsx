@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import emailjs, { init } from "@emailjs/browser";
 function Footer() {
   
-  init("user_xxxxxxxxxxxxxxxxxxx");
+  init(user);
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -24,7 +24,7 @@ function Footer() {
     <div className="container">
       <form ref={form} onSubmit={sendEmail}>
       <label>Name</label>
-      <input type="text" name="user-name" />
+      <input type="text" name="user-name" value={user} />
       <label>Email</label>
       <input type="email" name="user_email" />
       <label>Message</label>
