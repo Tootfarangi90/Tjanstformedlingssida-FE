@@ -23,7 +23,42 @@ the page is hosted at heroku follow this link https://tjanster22.herokuapp.com/
 **Test technologies:**
 + Jestjs with React testing library
     
-  
+ <h3>Class Diagram over project developers<h3>
+
+
+```mermaid
+classDiagram
+    Tjänstförmedlingssida <|-- Robert
+    Tjänstförmedlingssida <|-- Ayda
+    Tjänstförmedlingssida <|-- Romina
+    Tjänstförmedlingssida <|-- James
+    Tjänstförmedlingssida <|-- Abdi
+    Tjänstförmedlingssida : Front-End
+    Tjänstförmedlingssida : +React
+    Tjänstförmedlingssida: Back-end()
+    Tjänstförmedlingssida: +NodeJS()
+    class Robert{
+      + Databasexpert
+      + Gillar infinity loops
+      + Stilig
+    }
+    class Ayda{
+      +Markdown expert
+      +Bra på ställa frågor
+    }
+    class Romina{
+      +Scrumboard designer
+      +Bra på laga persisk mat
+    }
+    class James{
+      +JWT enthusiast
+      -Gillar Covid och Covid gillar honom
+    }
+    class Abdi{
+      +Gillar äta proteinbars
+      -Batteriet på hans dator tar slut fort
+    }
+```
 
 
 ## TTFHW
@@ -65,41 +100,4 @@ mkdir __tests__
 
 touch ./__tests__/yourFile.test.js
 
-```
-
-<h3>Class Diagram over project developers<h3>
-
-
-```mermaid
-classDiagram
-    Tjänstförmedlingssida <|-- Robert
-    Tjänstförmedlingssida <|-- Ayda
-    Tjänstförmedlingssida <|-- Romina
-    Tjänstförmedlingssida <|-- James
-    Tjänstförmedlingssida <|-- Abdi
-    Tjänstförmedlingssida : Front-End
-    Tjänstförmedlingssida : +React
-    Tjänstförmedlingssida: Back-end()
-    Tjänstförmedlingssida: +NodeJS()
-    class Robert{
-      + Databasexpert
-      + Gillar infinity loops
-      + Stilig
-    }
-    class Ayda{
-      +Markdown expert
-      +Bra på ställa frågor
-    }
-    class Romina{
-      +Scrumboard designer
-      +Bra på laga persisk mat
-    }
-    class James{
-      +JWT enthusiast
-      -Gillar Covid och Covid gillar honom
-    }
-    class Abdi{
-      +Gillar äta proteinbars
-      -Batteriet på hans dator tar slut fort
-    }
 ```
