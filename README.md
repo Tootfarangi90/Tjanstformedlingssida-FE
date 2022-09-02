@@ -26,7 +26,7 @@ Det här vår [Trello sprintboard](https://trello.com/b/bv0EIPpR/tj%C3%A4nstf%C3
     npm start
     
     
-##Hosting
+## Hosting
 the page is hosted at heroku follow this link https://tjanster22.herokuapp.com/
 
 <h3>Class Diagram over project developers<h3>
