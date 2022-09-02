@@ -7,9 +7,9 @@ import img from './logo.png'
 
 
 
-const Header = () => {
+const Header = (title) => {
 
-
+  
 
   return (
     <div className="HeaderContainer">
@@ -22,7 +22,8 @@ const Header = () => {
       </section>
       <section className='dashBoardTextContainer'>
         <p>Login/Registrera</p>
-        <p>Meddelanden</p>
+        <p data-testid='testid'>Meddelanden</p>
+        <h3 title='testTitle'>hej</h3>
       </section>
       <section className='droplistContainer'>
 
