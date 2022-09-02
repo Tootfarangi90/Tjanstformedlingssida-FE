@@ -4,6 +4,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Link
 } from "react-router-dom";
 import Login from './components/login-register/Login';
 import Register from './components/login-register/Register';
@@ -30,6 +31,7 @@ function App() {
     <Header />
 
     <Router>
+     <Link to="/login" />
       <div>
         <h1>This is the router</h1>
         <Routes >
