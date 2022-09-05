@@ -6,8 +6,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Login from './components/login-register/Login';
-import Register from './components/login-register/Register';
+import Login from './routes/login-register/Login';
+import Register from './routes/login-register/Register';
 import Footer from "./components/footer/footer"
 import Header from "./components/header/Header"
 

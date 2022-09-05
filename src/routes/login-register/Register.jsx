@@ -5,19 +5,18 @@ const Register = () => {
     const [firstname, setFirstname]     = useState('')
     const [lastname, setLastname]       = useState('')
     const [email, setEmail]             = useState('')
-    const [birthday, setBirthday]       = useState('')
     const [occupation, setOccupation]   = useState('')
     const [password, setPassword]       = useState('')
-    const [password2, setPassword2]     = useState('')
-    const [error, setError]             = useState('')
+
+
+
 
     const firstnameChanged  = (e) => setFirstname(e.target.value)
     const lastnameChanged   = (e) => setLastname(e.target.value)
     const emailChanged      = (e) => setEmail(e.target.value)
     const passwordChanged   = (e) => setPassword(e.target.value)
-    const password2Changed  = (e) => setPassword2(e.target.value)
     const occupationChanged = (e) => setOccupation(e.target.value)
-    const birthdayChanged   = (e) => setBirthday(e.target.value)
+
 
 
    async function registerUser(e) {
@@ -26,17 +25,34 @@ const Register = () => {
     try {
       const res = await fetch("http://localhost:8080/register", {
         method: "POST",
-        headers: {"Content-type": "application/json"},
-        body: JSON.stringify({firstname, lastname, email, password, birthday, password, occupation})
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          firstname, 
+          lastname, 
+          email, 
+          password, 
+          occupation
+        })
       })
       
       const data = await res.json()
       console.log(data.status)
       console.log(data)
-      
+
+      if (data.status === 400) {
+        console.log(data.message)
+        return
+      }
+
+      if (data.status === 409){
+        console.log(data.message)
+        return
+      }
+
       if(data.status === 200) {
-        console.log(data.users)
+        console.log(data)
         alert("Welcome")
+        return
       }
     } catch (error) {
       console.log(error)
@@ -64,7 +80,7 @@ const Register = () => {
          value={firstname} 
          placeholder="firstname"
          onChange={firstnameChanged} 
-         required
+         required={true}
          />
 
          </div>
@@ -75,7 +91,7 @@ const Register = () => {
         value={lastname} 
         placeholder="Lastname"
         onChange={lastnameChanged}
-        required  
+        required={true} 
         />
 <div className="input-group">
 
@@ -85,7 +101,7 @@ const Register = () => {
         value={email} 
         placeholder="Email"
         onChange={emailChanged}
-        required  
+        required={true}  
         />
         </div>
         <div className="input-group">
@@ -96,20 +112,7 @@ const Register = () => {
         value={password} 
         placeholder="Password"
         onChange={passwordChanged}
-        required  
-        />
-
-        </div>
-
-        <div className="input-group">
-
-        <input 
-        type="password" 
-        name='password2' 
-        value={password2} 
-        placeholder="Confirm password"
-        onChange={password2Changed}
-        required  
+        required={true} 
         />
 
         </div>
@@ -122,14 +125,14 @@ const Register = () => {
         value={occupation} 
         placeholder="occupation"
         onChange={occupationChanged}
-        required  
+        required={true}  
         />
         
         </div>
         <div className="input-group">
 
           </div>
-        <button type="submit" className='button'>Skapa konto</button>
+        <button className='button'>Skapa konto</button>
     </form>
         </section>
     </>

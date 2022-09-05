@@ -5,7 +5,7 @@ import "./login-register.css"
 const Login = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    const [error, setError] = useState("");
+
 
     const emailChanged = (e) => setEmail(e.target.value)
     const passwordChanged = (e) => setPassword(e.target.value)
@@ -75,9 +75,6 @@ const Login = () => {
         <button type="submit" className='button'>Logga in</button>
     </form>
         </fieldset>
-
-    <p>This is my email: {email}</p>
-    <p>This is my password{password}</p>
 
     </>
   )
