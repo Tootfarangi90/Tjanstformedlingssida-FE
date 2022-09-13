@@ -19,7 +19,6 @@ const Home = () => {
   return(
     <div className='home-component'>
       <h1>Tillfällig Home component</h1>
-      <p>Byt ut den sen</p>
     </div>
   )
 }
