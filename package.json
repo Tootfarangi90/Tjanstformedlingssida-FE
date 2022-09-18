@@ -19,12 +19,13 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy": "git push heroku main",
     "test": "react-scripts test --verbose",
     "eject": "react-scripts eject",
     "foo": "echo \"fooo\" && exit 0"
   },
   "pre-commit":[
-    "test","foo"
+    "test","foo","build"
   ],
   "browserslist": {
     "production": [
