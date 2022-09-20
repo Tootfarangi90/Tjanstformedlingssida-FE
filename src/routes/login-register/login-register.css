@@ -1,4 +1,11 @@
+#form {
+  margin: 0 auto;
+  max-width: 500px;
+  border: 1px solid black;
+}
+
 button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
 }
+
