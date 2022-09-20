@@ -8,32 +8,27 @@ import {
 } from "react-router-dom";
 import Login from './routes/login-register/Login';
 import Register from './routes/login-register/Register';
-import Footer from "./components/footer/footer"
-import Header from "./components/header/Header"
+import Footer from "./components/footer/footer";
+import Header from "./components/header/Header";
+import Home from "./components/home/Home";
 
 
 
 
 
-const Home = () => {
-  return(
-    <div className='home-component'>
-      <h1>Tillfällig Home component</h1>
-      <p>Byt ut den sen</p>
-    </div>
-  )
-}
+
 
 
 function App() {
   return (
     <div className="App">
     <Header title='Header'/>
+    
 
     <Router>
      <Link to="/login" />
       <div>
-        <h1>This is the router</h1>
+        
         <Routes >
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
