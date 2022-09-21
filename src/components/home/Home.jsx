@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Home.css"
+import './home.css'
 
 
 
@@ -12,11 +12,9 @@ function Home() {
 
     <div>
         <h1 id="main-title">
-            Välkommen till Akutraketen
+            Populära tjänster
         </h1>
-        <h2>
-            Varsågod och välj tjänst här nedan!
-        </h2>
+     
     </div>
   )
 }
