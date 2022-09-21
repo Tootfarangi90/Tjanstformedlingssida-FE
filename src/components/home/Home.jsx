@@ -1,4 +1,5 @@
 import React from 'react'
+import "./Home.css"
 
 
 
@@ -10,7 +11,7 @@ function Home() {
   return (
 
     <div>
-        <h1>
+        <h1 id="main-title">
             Välkommen till Akutraketen
         </h1>
         <h2>
