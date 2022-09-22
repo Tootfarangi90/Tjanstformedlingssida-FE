@@ -11,6 +11,7 @@ import Register from './routes/login-register/Register';
 import Footer from "./components/footer/footer";
 import Header from "./components/header/Header";
 import Home from "./components/home/Home";
+import Dashboard from './routes/dashboard/dashboard';
 import { CarouselData } from './components/home/CarouselData';
 
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Home slides={CarouselData} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
     </Router>
