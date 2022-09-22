@@ -21,8 +21,9 @@ const Header = (title) => {
         <FontAwesomeIcon icon={faEnvelope}/>
       </section>
       <section className='dashBoardTextContainer'>
-        <p title='testTitle'>Login/Registrera</p>
+        <p>Login/Registrera</p>
         <p data-testid='testid'>Meddelanden</p>
+        <h3 title='testTitle'>hej</h3>
       </section>
       <section className='droplistContainer'>
 
