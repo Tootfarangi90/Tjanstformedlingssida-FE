@@ -1,0 +1,17 @@
+name: discord 
+
+on: [push]
+jobs:
+
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: send custom messages
+      uses: appleboy/discord-action@master
+      with:
+        webhook_id: https://discord.com/api/webhooks/1022645328282918936/
+        webhook_token: UX0yX30tjpZE0H5echDg9G4MBltpZjX1V9R3jfct7N6UT3JHwDW_KPEptRzBnhAjNNBb
+        args: The ${{ github.event_name }} event triggered first step.
