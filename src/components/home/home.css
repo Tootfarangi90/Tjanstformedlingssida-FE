@@ -1,0 +1,61 @@
+#main-title {
+    color: #FF5912;
+}
+
+.carousel {
+    position: relative;
+    height:40vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border:1px solid;
+    border-color: #FF5912;
+}
+.img:hover {
+    width: 290px;
+    height: 290px;
+    transition:ease-in-out 0.15s;
+    border: 3.5px solid;
+    border-color: #FF5912;
+    cursor: pointer;
+}
+
+.right-arrow {
+    position: absolute;
+    top: 42%;
+    right: 500px;
+    font-size: 3rem;
+    color:black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+.right-arrow:hover {
+    color: #FF5912;
+    transition:ease-in-out 0.15s;
+
+}
+
+.left-arrow {
+    position: absolute;
+    top: 42%;
+    left: 500px;
+    font-size: 3rem;
+    color:black;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.left-arrow:hover {
+    color: #FF5912;
+    transition:ease-in-out 0.15s;
+
+}
