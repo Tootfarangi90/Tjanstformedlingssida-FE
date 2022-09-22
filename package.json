@@ -27,7 +27,7 @@
     "foo": "echo \"fooo\" && exit 0"
   },
   "pre-commit":[
-    "test","build"
+    "test"
   ],
   "browserslist": {
     "production": [
