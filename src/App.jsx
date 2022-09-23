@@ -29,7 +29,8 @@ function App() {
     <Router>
      <Link to="/login" />
       <div>
-        <h1>This is the not router</h1>
+        <h1>Snowflake proxy</h1>
+        <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
         <Routes >
           <Route path="/" element={<Home slides={CarouselData} />} />
           <Route path="/login" element={<Login />} />
