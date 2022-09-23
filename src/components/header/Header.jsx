@@ -35,7 +35,7 @@ const Header = (title) => {
             <li><a href="/login" className="App-link">Login</a></li>
             <li><a href="/register" className="App-link" >Register</a></li>
             <li><a href="/dashboard" className="App-link">Dashboard</a></li>
-            <li><a href="#" className="App-link">Skriv er länk</a></li>
+           
           </ul>
         </nav>
       </section>
