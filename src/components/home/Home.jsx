@@ -1,7 +1,9 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 import './home.css'
 import { CarouselData } from './CarouselData'
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa'
+import Allcategories from '../../routes/categories/Allcategories'
 
 
 
@@ -25,6 +27,12 @@ console.log(currentSlide);
 
 if(!Array.isArray(slides) || slides.length <= 0) {
   return null;
+}
+
+let navigator = useNavigate(); 
+const routeChange = () =>{ 
+  let path = `Allcategories`; 
+  navigator(path);
 }
 
   return (
@@ -51,7 +59,7 @@ if(!Array.isArray(slides) || slides.length <= 0) {
             )
           })}
         </section>
-        <button className='category-btn' > Alla kategorier </button>
+        <button className='category-btn' onClick={routeChange}> Alla kategorier </button>
      
     </div>
   )
