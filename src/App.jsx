@@ -13,7 +13,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Dashboard from './routes/dashboard/dashboard';
 import { CarouselData } from './components/home/CarouselData';
-
+import Allcategories from './routes/categories/Allcategories';
 
 
 
@@ -36,6 +36,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/allcategories" element={<Allcategories />} />
         </Routes>
       </div>
     </Router>

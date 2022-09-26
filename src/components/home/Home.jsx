@@ -51,6 +51,7 @@ if(!Array.isArray(slides) || slides.length <= 0) {
             )
           })}
         </section>
+        <button className='category-btn' > Alla kategorier </button>
      
     </div>
   )
