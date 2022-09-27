@@ -25,7 +25,6 @@
     "eject": "react-scripts eject",
     "prepare": "husky install"
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",

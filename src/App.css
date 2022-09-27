@@ -21,20 +21,25 @@
   align-items: center;
   justify-content: center;
 }
-container{
+.container{
+  width: 100%;
+  bottom: 0;
   background-color: black;
   display: flex;
-  justify-content: space-between;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
+  height: 25vh;
+  border: salmon dashed 1px;
+}
+.textbox{
+  border: solid red 2px ;
+  margin: 5px;
+}
+.form{
+  border: solid red 2px ;
 }
 
-footer {
-  height: 100px;
-  background-color: black;
-  width: 100%;
-  padding-top: 10px;
 
-}
 
 .App-link {
   color: #61dafb;
