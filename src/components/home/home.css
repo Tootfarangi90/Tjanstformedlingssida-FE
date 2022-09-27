@@ -59,3 +59,17 @@
     transition:ease-in-out 0.15s;
 
 }
+
+.category-btn {
+    width: 25%;
+    height: 35px;
+    background-color: #FF5912;
+    border: 1px solid black;
+    border-radius: 25px;
+
+}
+
+.category-btn:hover {
+    background-color: #ff8550;
+    cursor: pointer;
+}

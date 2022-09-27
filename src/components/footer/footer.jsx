@@ -1,35 +1,35 @@
-import React, { useRef } from "react";
-import emailjs, { init } from "@emailjs/browser";
+import React, { useState } from "react";
+
 function Footer() {
-  
-  init("user_xxxxxxxxxxxxxxxxxxx");
-  const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs.sendForm("service_1chwimo", "template_bbsop3q", form.current, "RNuv-F5vEgfSdMZkX").then(
-      (result) => {
-        alert("Message Sent Successfully");
-        console.log(result);
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
-  };
-
-
-
+  const [email, setEmail]= useState("")
+  const [text, setText]= useState("")
+  console.log(email)
+  console.log(text)
   return (
     <div className="container">
-      <form ref={form} onSubmit={sendEmail}>
-      <label>Name</label>
-      <input type="text" name="user-name" />
-      <label>Email</label>
-      <input type="email" name="user_email" />
-      <label>Message</label>
-      <textarea name="message" />
-    <button type="submit" >Send</button>
+      <form className="form">
+     
+     <input type="email"
+      name="email" 
+      required 
+      placeholder="Email" 
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      />
+
+    <div className="textbox">
+    <textarea 
+    name="message" 
+    placeholder="Skriv något"
+    value={text}
+    onChange={(e)=> setText(e.target.value)}
+    
+    
+    />
+    </div>
+
+<button type="submit" >Send</button>
+     
     </form> 
     
     </div>

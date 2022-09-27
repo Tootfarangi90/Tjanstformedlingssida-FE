@@ -14,7 +14,7 @@ import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Dashboard from './routes/dashboard/dashboard';
 import { CarouselData } from './components/home/CarouselData';
-
+import Allcategories from './routes/categories/Allcategories';
 
 
 
@@ -53,6 +53,7 @@ const [user, setUser] = useState(null)
 
           <Route path="*" element={<Navigate to={"/"} />} />
 
+          <Route path="/allcategories" element={<Allcategories />} />
         </Routes>
       </div>
     </Router>
