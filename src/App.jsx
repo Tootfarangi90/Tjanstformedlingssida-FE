@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  Navigate
 } from "react-router-dom";
 import Login from './routes/login-register/Login';
 import Register from './routes/login-register/Register';
@@ -22,6 +23,11 @@ import { CarouselData } from './components/home/CarouselData';
 
 
 function App() {
+
+const [user, setUser] = useState(null)
+
+
+
   return (
     <div className="App">
     <Header title='Header'/>
@@ -33,9 +39,20 @@ function App() {
         <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
         <Routes >
           <Route path="/" element={<Home slides={CarouselData} />} />
-          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+
+          {!user && 
+          (<Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
+          )}
+
+          {user && (
+          <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
+          )}
+
+          <Route path="/dashboard" element={<Navigate to={user ? "/dashboard" : "/login"}/>} />
+
+          <Route path="*" element={<Navigate to={"/"} />} />
+
         </Routes>
       </div>
     </Router>

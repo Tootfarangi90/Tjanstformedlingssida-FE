@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import "./login-register.css"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 
-const Login = () => {
+const Login = ({auth}) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [message, setMessage] = useState('')
     const emailChanged = (e) => setEmail(e.target.value)
     const passwordChanged = (e) => setPassword(e.target.value)
 
@@ -22,41 +23,43 @@ const Login = () => {
         })
         console.log(res.status)
         const data = await res.json()
-        //alert(res.status )
 
         if (res.status == 200) {
           navigate("/dashboard")
+          auth()
         }
 
         if (res.status == 401) {
-          console.log("Invalid password")
+          setMessage(data.message)
+          return
         }
 
         if (res.status == 404) {
-          console.log("Email not found")
+          setMessage(data.message)
+          return
         }
 
       } catch (error) {
+        setMessage("Error, try again later")
         console.log("Error:" + error)
+        return
         
       }
 
     }
     
   return (
-    
+
     <>
 
-
-    <fieldset>
-        <legend>Logga in</legend>
-      <div>
-        <button id="register" className='button' onClick={() => console.log("Skapa konto!")}>Skapa konto</button>
-      </div>
+    <div>
+        <h2>Logga in</h2>
 
       <form onSubmit={loginUser}>
 
-            <fieldset>
+        <p className='messageBox'>{message}</p>
+
+            <div>
             <legend>Email</legend>
               <input 
                 type="email" 
@@ -65,10 +68,10 @@ const Login = () => {
                 onChange={emailChanged}
                 required
                 />
-                </fieldset>
+                </div>
 
      
-          <fieldset>
+          <div>
           <legend>Lösenord</legend>
              <input 
                type="password" 
@@ -78,16 +81,22 @@ const Login = () => {
                onChange={passwordChanged}
                required
               />
-          </fieldset>
+          </div>
     
+      
+          <button 
+            type="submit" 
+            className='button'>
+            Logga in
+        </button>
 
-        <button 
-          type="submit" 
-          className='button'>
-          Logga in
-      </button>
+
+        <div>
+        Har du inget konto? <Link to="/register">Registrera dig här</Link>
+        </div>
+
     </form>
-</fieldset>
+</div>
 
     </>
   )

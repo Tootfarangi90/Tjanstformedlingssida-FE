@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import "./login-register.css"
 
 const Register = () => {
@@ -7,16 +8,13 @@ const Register = () => {
     const [email, setEmail]             = useState('')
     const [occupation, setOccupation]   = useState('')
     const [password, setPassword]       = useState('')
-
-
-
+    const [message, setMessage]         = useState('')
 
     const firstnameChanged  = (e) => setFirstname(e.target.value)
     const lastnameChanged   = (e) => setLastname(e.target.value)
     const emailChanged      = (e) => setEmail(e.target.value)
     const passwordChanged   = (e) => setPassword(e.target.value)
     const occupationChanged = (e) => setOccupation(e.target.value)
-
 
 
    async function registerUser(e) {
@@ -36,25 +34,26 @@ const Register = () => {
       })
       
       const data = await res.json()
-      console.log(data.status)
-      console.log(data)
+      console.log(res.status)
+  
 
-      if (data.status === 400) {
-        console.log(data.message)
+      if (res.status == 400) {
+        setMessage(data.message)
         return
       }
 
-      if (data.status === 409){
-        console.log(data.message)
+      if (res.status == 409){
+        setMessage(data.message)
         return
       }
 
-      if(data.status === 200) {
-        console.log(data)
-        alert("Welcome")
+      if(res.status == 200) {
+        setMessage(data.message)
         return
       }
+
     } catch (error) {
+      setMessage("Error, try again later")
       console.log(error)
       
     }
@@ -65,14 +64,13 @@ const Register = () => {
 
     <>
     <section id="form">
-    <div id="toggle-form">
-        <button id="login" className='button' onClick={() => console.log("Hello World")}>Logga in</button>
-      </div>
 
     <form onSubmit={registerUser}>
-      <h4>Register</h4>
+      <h2>Register</h2>
+
 
 <div className="input-group">
+<p className='messageBox'>{message}</p>
 
         <input
          type="text" 
@@ -80,7 +78,6 @@ const Register = () => {
          value={firstname} 
          placeholder="firstname"
          onChange={firstnameChanged} 
-         required={true}
          />
 
          </div>
@@ -91,7 +88,6 @@ const Register = () => {
         value={lastname} 
         placeholder="Lastname"
         onChange={lastnameChanged}
-        required={true} 
         />
 <div className="input-group">
 
@@ -101,7 +97,6 @@ const Register = () => {
         value={email} 
         placeholder="Email"
         onChange={emailChanged}
-        required={true}  
         />
         </div>
         <div className="input-group">
@@ -112,7 +107,6 @@ const Register = () => {
         value={password} 
         placeholder="Password"
         onChange={passwordChanged}
-        required={true} 
         />
 
         </div>
@@ -124,8 +118,7 @@ const Register = () => {
         name="occupation" 
         value={occupation} 
         placeholder="occupation"
-        onChange={occupationChanged}
-        required={true}  
+        onChange={occupationChanged} 
         />
         
         </div>
@@ -133,6 +126,11 @@ const Register = () => {
 
           </div>
         <button className='button'>Skapa konto</button>
+
+        <div>
+        Har du redan ett konto? <Link to="/login">Logga in här</Link>
+        </div>
+
     </form>
         </section>
     </>
