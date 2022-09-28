@@ -27,29 +27,22 @@ const Login = ({auth}) => {
         if (res.status == 200) {
           navigate("/dashboard")
           auth()
-        }
 
-        if (res.status == 400) {
+        } if (res.status == 400) {
           setMessage(data.message)
-          setMessage(true)
           return
-        }
 
-        if (res.status == 401) {
+        } if (res.status == 401) {
           setMessage(data.message)
-          setMessage(true)
           return
-        }
 
-        if (res.status == 404) {
+        } if (res.status == 404) {
           setMessage(data.message)
-          setMessage(true)
           return
         }
 
       } catch (error) {
         setMessage("Error, try again later")
-        setMessage(true)
         console.log("Error:" + error)
         return
         

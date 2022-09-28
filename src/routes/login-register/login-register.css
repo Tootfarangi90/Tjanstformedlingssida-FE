@@ -31,19 +31,9 @@ h1 {
 
 .NoAccount, .Account {
   padding: 20px;
+  font-size: 20px;
 }
 
-
-
-/*
 .messageBox {
   color: #ba3939;
-  background: #ffe0e0;
-  border: 1px solid #a33a3a;
-  width: 25%;
-  margin: 0 auto;
-  margin-bottom: 10px;
-  height: 20px;
-  padding: 10px;
 }
-*/
