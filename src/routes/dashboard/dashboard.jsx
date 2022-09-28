@@ -1,11 +1,12 @@
 import React from 'react'
+import "./dashboard.css"
 
 const dashboard = ({logout}) => {
 
   return (
     <div>
 
-      <h2>Dashboard</h2>
+      <h1>Dashboard</h1>
 
       <p>Välkommen till din profil</p>
 

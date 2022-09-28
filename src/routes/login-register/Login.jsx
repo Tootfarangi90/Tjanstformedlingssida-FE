@@ -29,18 +29,27 @@ const Login = ({auth}) => {
           auth()
         }
 
+        if (res.status == 400) {
+          setMessage(data.message)
+          setMessage(true)
+          return
+        }
+
         if (res.status == 401) {
           setMessage(data.message)
+          setMessage(true)
           return
         }
 
         if (res.status == 404) {
           setMessage(data.message)
+          setMessage(true)
           return
         }
 
       } catch (error) {
         setMessage("Error, try again later")
+        setMessage(true)
         console.log("Error:" + error)
         return
         
@@ -53,7 +62,7 @@ const Login = ({auth}) => {
     <>
 
     <div>
-        <h2>Logga in</h2>
+        <h1>Logga in här</h1>
 
       <form onSubmit={loginUser}>
 
@@ -66,7 +75,7 @@ const Login = ({auth}) => {
                 name='email' 
                 value={email}
                 onChange={emailChanged}
-                required
+                placeholder="Email"
                 />
                 </div>
 
@@ -79,7 +88,6 @@ const Login = ({auth}) => {
                value={password} 
                placeholder="Lösenord" 
                onChange={passwordChanged}
-               required
               />
           </div>
     
@@ -91,7 +99,7 @@ const Login = ({auth}) => {
         </button>
 
 
-        <div>
+        <div className='NoAccount'>
         Har du inget konto? <Link to="/register">Registrera dig här</Link>
         </div>
 

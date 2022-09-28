@@ -2,3 +2,48 @@ button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
 }
+
+input {
+  width: 25%;
+  height: 35px;
+  margin: 10px;
+}
+
+
+button {
+  width: 25%;
+  height: 35px;
+  background-color: #FF5912;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #ff8550;
+  cursor: pointer;
+}
+
+h1 {
+  color: #FF5912;
+  font-size: 40px;
+}
+
+.NoAccount, .Account {
+  padding: 20px;
+}
+
+
+
+/*
+.messageBox {
+  color: #ba3939;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+  width: 25%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: 20px;
+  padding: 10px;
+}
+*/

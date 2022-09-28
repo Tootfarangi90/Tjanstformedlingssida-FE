@@ -64,19 +64,19 @@ const Register = () => {
 
     <>
     <section id="form">
+    <h1>Registrera dig här</h1>
 
     <form onSubmit={registerUser}>
-      <h2>Register</h2>
 
 
 <div className="input-group">
-<p className='messageBox'>{message}</p>
+    <p className='messageBox'>{message}</p>
 
         <input
          type="text" 
          name='firstname' 
          value={firstname} 
-         placeholder="firstname"
+         placeholder="Förnamn"
          onChange={firstnameChanged} 
          />
 
@@ -86,7 +86,7 @@ const Register = () => {
         type="text" 
         name='lastname' 
         value={lastname} 
-        placeholder="Lastname"
+        placeholder="Efternamn"
         onChange={lastnameChanged}
         />
 <div className="input-group">
@@ -105,7 +105,7 @@ const Register = () => {
         type="password" 
         name='password' 
         value={password} 
-        placeholder="Password"
+        placeholder="Lösenord"
         onChange={passwordChanged}
         />
 
@@ -117,22 +117,20 @@ const Register = () => {
         
         name="occupation" 
         value={occupation} 
-        placeholder="occupation"
+        placeholder="Sysselsättning"
         onChange={occupationChanged} 
         />
         
         </div>
-        <div className="input-group">
 
-          </div>
         <button className='button'>Skapa konto</button>
 
-        <div>
+        <div className='Account'>
         Har du redan ett konto? <Link to="/login">Logga in här</Link>
         </div>
 
     </form>
-        </section>
+</section>
     </>
   )
 }
