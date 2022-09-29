@@ -40,7 +40,7 @@ it('header with testTitle', async () => {
 it('header links', async () => {
     render(<Header/>);
     const links = screen.getAllByRole('link');
-    expect(links.length).toBe(5);
+    expect(links.length).toBe(8);
 });
 
 
