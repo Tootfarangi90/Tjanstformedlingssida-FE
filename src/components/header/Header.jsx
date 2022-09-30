@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLaptopCode, faEnvelope, faUsers} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faHouse, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawesome/free-solid-svg-icons'
 import img from './logo.png'
 import { Link, NavLink } from 'react-router-dom'
 import { useEffect } from 'react'
@@ -9,12 +9,13 @@ import { useEffect } from 'react'
 
 
 
-const Header = (title) => {
+const Header = () => {
 
 
 
   return (
     <div className="HeaderContainer">
+
       <section className='logoContainer'>
       <Link to="/home"><img id="logo" src={img} alt="logo"/></Link>
       </section>
@@ -28,9 +29,7 @@ const Header = (title) => {
         <Link className="NavLinkText" to="/register">Registrera</Link>
         <Link className="NavLinkText" data-testid='testid' to="/register">Meddelanden</Link>
       </section>
-      <section className='droplistContainer'>
 
-      </section>
       <section className='linkContainer'>
         <nav>
           <ul>
@@ -39,8 +38,24 @@ const Header = (title) => {
           </ul>
         </nav>
       </section>
+
+      <section className='linkTextContainer'>
+        <a href="/allcategories">Kategorier</a>
+        <a href="/">Kontakt</a>
+      </section>
+
+      <section className='search'>
+      <input
+         type="text" 
+         name='search' 
+         placeholder="Sök tjänst här..." 
+         />
+       <button className='searchBtn'>SÖK</button>
+        </section>
+
     </div>
   )
+
 }
 
 export default Header
