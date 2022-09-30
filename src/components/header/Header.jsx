@@ -18,7 +18,7 @@ console.log(user.auth)
 
   const [users, setUsers] = useState([])
   
-
+console.log(users.users)
 
   const get = () => {
   
@@ -60,17 +60,17 @@ console.log(user.auth)
       </section>
       
       <section className='dashBoardTextContainer'>
-        <a>Kategorier</a>
+        <a class='text'>Kategorier</a>
         {!user.auth &&
           <>
-            <NavLink className="NavLinkText" title='testTitle' to="/login">Login</NavLink>
-            <NavLink className="NavLinkText" data-testid='testid' to="/register">Registrera</NavLink>
+            <NavLink className="NavLinkText text" title='testTitle' to="/login">Login</NavLink>
+            <NavLink className="NavLinkText text" data-testid='testid' to="/register">Registrera</NavLink>
           </>
         }
         {user.auth && 
-          <NavLink className="NavLinkText" to="/dashboard">Profil</NavLink>
+          <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
         }
-        <a>Kontakt</a>
+        <a class='text'>Kontakt</a>
       </section>
       
       <section className='search'>
@@ -79,8 +79,13 @@ console.log(user.auth)
          name='search' 
          placeholder="Sök tjänst här..." 
          />
-        <button className='searchBtn'>SÖK</button>
+        <button className='searchBtn text'>SÖK</button>
       </section>
+
+      <section className='registeredUsersCount'>
+        <p class='text'>Vi har för närvarande {users.users} registrerade användare!</p>
+      </section>
+
 
     </div>
   )
