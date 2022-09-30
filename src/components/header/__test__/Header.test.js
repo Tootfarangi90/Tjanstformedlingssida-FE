@@ -41,7 +41,7 @@ it('header with testTitle', async () => {
 it('header links', async () => {
     render(<Router><Header/></Router>);
     const links = screen.getAllByRole('link');
-    expect(links.length).toBe(7);
+    expect(links.length).toBe(5);
 });
 
 

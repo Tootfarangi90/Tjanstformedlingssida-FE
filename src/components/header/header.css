@@ -39,6 +39,7 @@
 .dashBoardTextContainer a {
     color: white;
     text-decoration: none;
+    padding-top: 5px;
 }
 
 .dashBoardTextContainer a:hover,  .dashboardIconContainer svg:hover{
@@ -54,6 +55,27 @@
     text-decoration-color: rgb(158, 85, 85);
     text-decoration-style: double;
 }
+
+#loginIcon{
+    padding-left: 5px;
+}
+
+#registrationIcon{
+    padding-right: 10px;
+}
+
+#categoriesIconNotLoggedIn{
+    padding-left: 7px;
+}
+
+#categoriesIconLoggedIn{
+    padding-left: 8px;
+}
+
+#profileIcon{
+    padding-left: 8px;
+}
+
 
 
 
