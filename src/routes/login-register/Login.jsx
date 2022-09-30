@@ -62,7 +62,7 @@ const Login = ({auth}) => {
         <p className='messageBox'>{message}</p>
 
             <div>
-            <legend>Emailadress</legend>
+            <legend>Email</legend>
               <input 
                 type="email" 
                 name='email' 
