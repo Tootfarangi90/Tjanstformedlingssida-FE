@@ -27,37 +27,35 @@ function App() {
 const [user, setUser] = useState(null)
 
 
-
   return (
     <div className="App">
-    <Header title='Header'/>
+      <Router>
+        <Header title='Header'/>
+        <Link to="/login" />
+          <div>
+            <h1>Snowflake proxy</h1>
+            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
+            <Routes >
+              <Route path="/" element={<Home slides={CarouselData} />} />
+              <Route path="/register" element={<Register />} />
 
-    <Router>
-     <Link to="/login" />
-      <div>
-        <h1>Snowflake proxy</h1>
-        <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
-        <Routes >
-          <Route path="/" element={<Home slides={CarouselData} />} />
-          <Route path="/register" element={<Register />} />
+              {!user && 
+              (<Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
+              )}
 
-          {!user && 
-          (<Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
-          )}
+              {user && (
+              <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
+              )}
 
-          {user && (
-          <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
-          )}
+              <Route path="/dashboard" element={<Navigate to={user ? "/dashboard" : "/login"}/>} />
 
-          <Route path="/dashboard" element={<Navigate to={user ? "/dashboard" : "/login"}/>} />
+              <Route path="*" element={<Navigate to={"/"} />} />
 
-          <Route path="*" element={<Navigate to={"/"} />} />
-
-          <Route path="/allcategories" element={<Allcategories />} />
-        </Routes>
-      </div>
-    </Router>
-<Footer />
+              <Route path="/allcategories" element={<Allcategories />} />
+            </Routes>
+          </div>
+      </Router>
+    <Footer />
     </div>
   );
 }

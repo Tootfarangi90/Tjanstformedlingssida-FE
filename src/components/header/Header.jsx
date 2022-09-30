@@ -1,29 +1,32 @@
 import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faLaptopCode, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faLaptopCode, faEnvelope, faUsers} from '@fortawesome/free-solid-svg-icons'
 import img from './logo.png'
+import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 
 
 const Header = (title) => {
 
-  
+
 
   return (
     <div className="HeaderContainer">
       <section className='logoContainer'>
-        <img id="logo" src={img} alt="logo"/>
+      <Link to="/home"><img id="logo" src={img} alt="logo"/></Link>
       </section>
-      <section className='dashboardContainer'>
-        <FontAwesomeIcon icon={faLaptopCode} />
-        <FontAwesomeIcon icon={faEnvelope}/>
+      <section className='dashboardIconContainer'>
+        <Link className="NavLinkText" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></Link>
+        <Link className="NavLinkText" to="/register"><FontAwesomeIcon icon={faUsers}/></Link>
+        <Link className="NavLinkText" to="/register"><FontAwesomeIcon id='icon2' icon={faEnvelope}/></Link>
       </section>
       <section className='dashBoardTextContainer'>
-        <p>Login/Registrera</p>
-        <p data-testid='testid'>Meddelanden</p>
-        <h3 title='testTitle'>hej</h3>
+        <Link className="NavLinkText" title='testTitle' to="/login">Login</Link>
+        <Link className="NavLinkText" to="/register">Registrera</Link>
+        <Link className="NavLinkText" data-testid='testid' to="/register">Meddelanden</Link>
       </section>
       <section className='droplistContainer'>
 
@@ -31,11 +34,8 @@ const Header = (title) => {
       <section className='linkContainer'>
         <nav>
           <ul>
-            <li><a href="/" className="App-link">Home</a></li>
-            <li><a href="/login" className="App-link">Login</a></li>
-            <li><a href="/register" className="App-link" >Register</a></li>
-            <li><a href="/dashboard" className="App-link">Dashboard</a></li>
-            <li><a href="/allcategories" className="App-link">Alla kategorier</a></li>
+            <li><Link to="/dashboard" className="App-link">Dashboard</Link></li>
+            <li><Link to="/allcategories" className="App-link">Alla kategorier</Link></li>
           </ul>
         </nav>
       </section>
