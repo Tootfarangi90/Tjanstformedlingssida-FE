@@ -1,45 +1,48 @@
 import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope, faHouse, faUser, faTableCells} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faHouse, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawesome/free-solid-svg-icons'
 import img from './logo.png'
+import { Link, NavLink } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 
 
 const Header = () => {
 
-  
+
 
   return (
     <div className="HeaderContainer">
 
       <section className='logoContainer'>
-        <img id="logo" src={img} alt="logo"/>
+      <Link to="/home"><img id="logo" src={img} alt="logo"/></Link>
       </section>
-
-      <section className='dashboardContainer'>
-        <a href="/"><FontAwesomeIcon icon={faHouse} /></a>
-        <a href="/login"><FontAwesomeIcon icon={faUser} /></a>
-        </section>
-
+      <section className='dashboardIconContainer'>
+        <Link className="NavLinkText" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></Link>
+        <Link className="NavLinkText" to="/register"><FontAwesomeIcon icon={faUsers}/></Link>
+        <Link className="NavLinkText" to="/register"><FontAwesomeIcon id='icon2' icon={faEnvelope}/></Link>
+      </section>
       <section className='dashBoardTextContainer'>
-        <a href="/">Hem</a>
-        <a href="/login">Konto</a>
+        <Link className="NavLinkText" title='testTitle' to="/login">Login</Link>
+        <Link className="NavLinkText" to="/register">Registrera</Link>
+        <Link className="NavLinkText" data-testid='testid' to="/register">Meddelanden</Link>
       </section>
 
       <section className='linkContainer'>
-        <a href="/allcategories"><FontAwesomeIcon icon={faTableCells} /></a>
-        <a href="/"><FontAwesomeIcon icon={faEnvelope} /></a>
+        <nav>
+          <ul>
+            <li><Link to="/dashboard" className="App-link">Dashboard</Link></li>
+            <li><Link to="/allcategories" className="App-link">Alla kategorier</Link></li>
+          </ul>
+        </nav>
       </section>
 
       <section className='linkTextContainer'>
         <a href="/allcategories">Kategorier</a>
         <a href="/">Kontakt</a>
       </section>
-
-      <p data-testid='testid'>Meddelanden</p>
-      <h3 title='testTitle'>hej</h3>
 
       <section className='search'>
       <input
