@@ -17,21 +17,21 @@ const Header = () => {
     <div className="HeaderContainer">
 
       <section className='logoContainer'>
-      <Link to="/home"><img id="logo" src={img} alt="logo"/></Link>
+      <NavLink to="/home"><img id="logo" src={img} alt="logo"/></NavLink>
       </section>
       
       <section className='dashboardIconContainer'>
         <FontAwesomeIcon icon={faTableCells}/>
-        <Link className="LinkIcon" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></Link>
-        <Link className="LinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></Link>
-        <Link className="LinkIcon" to="/register"><FontAwesomeIcon id='icon2' icon={faEnvelope}/></Link>
+        <NavLink className="NavLinkIcon" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></NavLink>
+        <NavLink className="NavLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
+        <NavLink className="NavLinkIcon" to="/register"><FontAwesomeIcon id='icon2' icon={faEnvelope}/></NavLink>
       </section>
       
       <section className='dashBoardTextContainer'>
         <a>Kategorier</a>
-        <Link className="LinkText" title='testTitle' to="/login">Login</Link>
-        <Link className="LinkText" to="/register">Registrera</Link>
-        <Link className="LinkText" data-testid='testid' to="/register">Kontakt</Link>
+        <NavLink className="NavLinkText" title='testTitle' to="/login">Login</NavLink>
+        <NavLink className="NavLinkText" to="/register">Registrera</NavLink>
+        <NavLink className="NavLinkText" data-testid='testid' to="/register">Kontakt</NavLink>
       </section>
       
       <section className='search'>

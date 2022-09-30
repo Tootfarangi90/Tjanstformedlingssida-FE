@@ -1,6 +1,6 @@
 .HeaderContainer {
     width: 100%;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     height: 35vh;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
@@ -26,6 +26,7 @@
     padding-top: 4%;
     justify-content: space-evenly;
     color: #FF5912;
+    
 }
 
 .dashBoardTextContainer {
@@ -33,7 +34,6 @@
     grid-column: 11 / -1;
     display: flex;
     justify-content: space-evenly;
-    color: white;
 }
 
 .dashBoardTextContainer a {
@@ -41,9 +41,21 @@
     text-decoration: none;
 }
 
-.LinkIcon {
+.dashBoardTextContainer a:hover,  .dashboardIconContainer svg:hover{
+    color: rgb(134, 65, 65);
+}
+
+.NavLinkIcon {
     color: #FF5912;
 }
+
+.dashBoardTextContainer a.active{
+    text-decoration: overline;
+    text-decoration-color: rgb(158, 85, 85);
+    text-decoration-style: double;
+}
+
+
 
 .search {
     grid-row: 4;

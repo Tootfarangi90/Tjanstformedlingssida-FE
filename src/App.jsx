@@ -30,7 +30,7 @@ const [user, setUser] = useState(null)
   return (
     <div className="App">
       <Router>
-        <Header title='Header'/>
+        <Header/>
         <Link to="/login" />
           <div>
             <h1>Snowflake proxy</h1>
