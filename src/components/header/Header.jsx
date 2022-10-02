@@ -56,7 +56,9 @@ console.log(users.users)
               <NavLink id='profileIcon' className="NavLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
             </>
         }
-        <FontAwesomeIcon className="NavLinkIcon" icon={faEnvelope}/>
+   
+        <NavLink className="NavLinkText text" to="/Kontakt"> <FontAwesomeIcon className="NavLinkIcon" icon={faEnvelope}/> </NavLink>
+
       </section>
       
       <section className='dashBoardTextContainer'>
@@ -70,7 +72,7 @@ console.log(users.users)
         {user.auth && 
           <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
         }
-        <a class='text'>Kontakt</a>
+         <NavLink className="NavLinkText text" to="/Kontakt">Kontakt</NavLink>
       </section>
       
       <section className='search'>
