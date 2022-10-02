@@ -21,25 +21,6 @@
   align-items: center;
   justify-content: center;
 }
-.container{
-  width: 100%;
-  bottom: 0;
-  background-color: black;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 25vh;
-  border: salmon dashed 1px;
-}
-.textbox{
-  border: solid red 2px ;
-  margin: 5px;
-}
-.form{
-  border: solid red 2px ;
-}
-
-
 
 .App-link {
   color: #61dafb;

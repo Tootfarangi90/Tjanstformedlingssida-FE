@@ -1,10 +1,17 @@
 import React, { useState } from "react";
+import "./Footer.css"
 
 function Footer() {
   const [email, setEmail]= useState("")
   const [text, setText]= useState("")
-  console.log(email)
-  console.log(text)
+  let register = (e)=>{
+    e.preventDefault()
+    console.log("GG")
+  }
+
+
+
+
   return (
     <div className="container">
       <form className="form">
@@ -28,7 +35,10 @@ function Footer() {
     />
     </div>
 
-<button type="submit" >Send</button>
+<button
+ type="submit" 
+ onClick={register}
+ >Send</button>
      
     </form> 
     
