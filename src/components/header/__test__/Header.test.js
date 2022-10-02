@@ -8,7 +8,7 @@ import { BrowserRouter as Router} from 'react-router-dom'
 
 it('header with text search', async () => {
     render(<Router><Header/></Router>);
-    const iconTextSearch = screen.getByText(/Meddelanden/i);
+    const iconTextSearch = screen.getByText(/Login/i);
     expect(iconTextSearch).toBeInTheDocument();
 });
 
@@ -41,7 +41,7 @@ it('header with testTitle', async () => {
 it('header links', async () => {
     render(<Router><Header/></Router>);
     const links = screen.getAllByRole('link');
-    expect(links.length).toBe(11);
+    expect(links.length).toBe(5);
 });
 
 

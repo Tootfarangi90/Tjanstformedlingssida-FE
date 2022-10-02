@@ -26,25 +26,25 @@ function App() {
 
 const [user, setUser] = useState(null)
 
-
+console.log(user)
   return (
     <div className="App">
       <Router>
-        <Header title='Header'/>
+        <Header auth={user}/>
         <Link to="/login" />
           <div>
             <h1>Snowflake proxy</h1>
-            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameborder="0" scrolling="no"></iframe>
+            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameBorder="0" scrolling="no"></iframe>
             <Routes >
               <Route path="/" element={<Home slides={CarouselData} />} />
               <Route path="/register" element={<Register />} />
 
-              {!user && 
-              (<Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
+              {!user && (
+                <Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
               )}
 
               {user && (
-              <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
+                <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
               )}
 
               <Route path="/dashboard" element={<Navigate to={user ? "/dashboard" : "/login"}/>} />
