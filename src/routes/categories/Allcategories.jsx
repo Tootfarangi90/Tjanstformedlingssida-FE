@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import { CarouselData } from '../../components/home/CarouselData';
+import './allcategories.css';
 
 
 const Allcategories = () => {
@@ -27,6 +28,7 @@ const Allcategories = () => {
             <button className='btn' onClick={()=> catFilter ('Music')}>Music</button>
             <button className='btn' onClick={()=> catFilter ('Coaching')}>Coaching</button>
             <button className='btn' onClick={()=> catFilter ('Tech')}>Tech</button>
+            <button className='btn' onClick={()=> catFilter ('Cooking')}>Cooking</button>
             
         </nav>
 
@@ -37,16 +39,16 @@ const Allcategories = () => {
             <>
               <div className='category-items' key={id}>
                     <div className='item-name' key={name}>
-                       <h2>{name}</h2>
-                       <h4>{category}</h4>
-                       <p>{text}</p>
-                       <p>{phone}</p>
-                       <p>{mail}</p>
+                       <h2 className='title'>{name}</h2>
+                       <h4 className='cat'>{category}</h4>
+                       <p className='text'>{text}</p>
+                       <p className='phone'>{phone}</p>
+                       <p className='mail'>{mail}</p>
 
                     </div>
                     <div className='item-img' key={img}> 
                     
-                      <img src={img} alt={category} />
+                      <img className='service-img' src={img} alt={category} />
                     </div>
 
               </div>
