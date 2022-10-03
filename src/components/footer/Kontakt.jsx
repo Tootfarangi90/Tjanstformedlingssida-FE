@@ -1,13 +1,29 @@
 import {useState} from 'react'
-import  "./Footer.css"
 
-function kontakt() {  const [email, setEmail]= useState("")
+
+function kontakt() {  
+const [email, setEmail]= useState("")
 const [text, setText]= useState("")
 
 
-let register = (e)=>{
+let post = async (e)=>{
   e.preventDefault()
-  console.log("GG")
+  
+  try {
+      const response = await fetch(`${process.env.REACT_APP_API_ADRESS}messages`,{
+          method: "POST",
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            email,
+            text
+          })
+      })
+      const data = await response.json()
+      console.log(data)
+      console.log(response.status)
+  } catch (error) {
+      
+  }
 }
 return (
   <div>
@@ -34,7 +50,7 @@ return (
 
 <button
 type="submit" 
-onClick={register}
+onClick={post}
 >Send</button> 
 </form>
   </div>
