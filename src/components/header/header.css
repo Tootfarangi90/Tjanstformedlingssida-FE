@@ -5,7 +5,7 @@
 .HeaderContainer {
     width: 100%;
     background-color: rgb(0, 0, 0);
-    height: 35vh;
+    height: 25vh;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(12, 1fr);
@@ -60,16 +60,8 @@
     text-decoration-style: double;
 }
 
-#loginIcon{
-    padding-left: 5px;
-}
-
-#registrationIcon{
-    padding-right: 10px;
-}
-
 #categoriesIconNotLoggedIn{
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 #categoriesIconLoggedIn{
@@ -80,8 +72,20 @@
     padding-left: 8px;
 }
 
+#loginIcon{
+    padding-left: 5px;
+}
+
+#registrationIcon{
+    margin-right: 3px;
+}
+
+#contactIcon{
+    margin-right: 6px;
+}
+
 .search {
-    grid-row: 4;
+    grid-row: 6;
     grid-column: 5 / 9;
     display: flex;
     color: #FF5912;
@@ -90,7 +94,7 @@
 }
 
 .searchField {
-    width: 550px;
+    width: 60%;
 }
 
 .searchBtn {

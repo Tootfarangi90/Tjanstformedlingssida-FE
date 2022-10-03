@@ -58,7 +58,7 @@ console.log(user.auth)
             </>
         }
 
-        <NavLink className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
+        <NavLink id='contactIcon' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
 
       </section>
       
