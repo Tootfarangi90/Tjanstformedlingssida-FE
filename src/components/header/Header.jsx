@@ -1,57 +1,93 @@
 import React from 'react'
 import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope, faHouse, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawesome/free-solid-svg-icons'
+import {faEnvelope, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawesome/free-solid-svg-icons'
 import img from './logo.png'
-import { Link, NavLink } from 'react-router-dom'
-import { useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 
 
 
-const Header = () => {
+const Header = (user) => {
 
+console.log(user.auth)
+  useEffect(() => {
+    get();
+  }, []);
+
+  const [users, setUsers] = useState([])
+  
+
+
+  const get = () => {
+  
+    fetch(`${process.env.REACT_APP_API_ADRESS}getusers`)
+      .then(response => response.json())
+      .then((responseJson) => {
+        
+        setUsers(responseJson)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+  }
+
+  
 
 
   return (
     <div className="HeaderContainer">
 
       <section className='logoContainer'>
-      <Link to="/home"><img id="logo" src={img} alt="logo"/></Link>
+      <NavLink to="/home"><img id="logo" src={img} alt="logo"/></NavLink>
       </section>
+      
       <section className='dashboardIconContainer'>
-        <Link className="NavLinkText" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></Link>
-        <Link className="NavLinkText" to="/register"><FontAwesomeIcon icon={faUsers}/></Link>
-        <Link className="NavLinkText" to="/register"><FontAwesomeIcon id='icon2' icon={faEnvelope}/></Link>
+        {!user.auth && 
+          <>
+            <FontAwesomeIcon id='categoriesIconNotLoggedIn' icon={faTableCells}/>
+            <NavLink id='loginIcon' className="navLinkIcon" to="/login"><FontAwesomeIcon id='test' icon={faLaptopCode}/></NavLink>
+            <NavLink id='registrationIcon' className="navLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
+          </>
+        }
+        {user.auth &&
+            <>
+              <FontAwesomeIcon id='categoriesIconLoggedIn' icon={faTableCells}/>
+              <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
+            </>
+        }
+
+        <NavLink id='contactIcon' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
+
       </section>
+      
       <section className='dashBoardTextContainer'>
-        <Link className="NavLinkText" title='testTitle' to="/login">Login</Link>
-        <Link className="NavLinkText" to="/register">Registrera</Link>
-        <Link className="NavLinkText" data-testid='testid' to="/register">Meddelanden</Link>
+        <a class='text'>Kategorier</a>
+        {!user.auth &&
+          <>
+            <NavLink className="NavLinkText text" title='testTitle' to="/login">Login</NavLink>
+            <NavLink className="NavLinkText text" data-testid='testid' to="/register">Registrera</NavLink>
+          </>
+        }
+        {user.auth && 
+          <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
+        }
+         <NavLink className="NavLinkText text" to="/kontakt">Kontakt</NavLink>
       </section>
-
-      <section className='linkContainer'>
-        <nav>
-          <ul>
-            <li><Link to="/dashboard" className="App-link">Dashboard</Link></li>
-            <li><Link to="/allcategories" className="App-link">Alla kategorier</Link></li>
-          </ul>
-        </nav>
-      </section>
-
-      <section className='linkTextContainer'>
-        <a href="/allcategories">Kategorier</a>
-        <a href="/">Kontakt</a>
-      </section>
-
+      
       <section className='search'>
-      <input
+        <input className='searchField'
          type="text" 
          name='search' 
          placeholder="Sök tjänst här..." 
          />
-       <button className='searchBtn'>SÖK</button>
-        </section>
+        <button className='searchBtn text'>SÖK</button>
+      </section>
+
+      <section className='registeredUsersCount'>
+        <p class='text'>Vi har för närvarande {users.users} registrerade användare!</p>
+      </section>
 
     </div>
   )
