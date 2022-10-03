@@ -5,14 +5,17 @@ import {faEnvelope, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawes
 import img from './logo.png'
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import $ from 'jquery'
+import 'jquery-ui-dist/jquery-ui'
 
 
 
 
 const Header = (user) => {
 
-console.log(user.auth)
+
   useEffect(() => {
+    
     get();
   }, []);
 
@@ -33,11 +36,15 @@ console.log(user.auth)
       })
   }
 
-  
+  const bounceFunction = (props) => {
+    $(`#${props}`).effect('bounce', 500);
+  }
 
 
   return (
     <div className="HeaderContainer">
+
+      <p>Date: <input type="text" id='datepicker'/></p>
 
       <section className='logoContainer'>
       <NavLink to="/home"><img id="logo" src={img} alt="logo"/></NavLink>
@@ -46,7 +53,7 @@ console.log(user.auth)
       <section className='dashboardIconContainer'>
         {!user.auth && 
           <>
-            <FontAwesomeIcon id='categoriesIconNotLoggedIn' icon={faTableCells}/>
+            <FontAwesomeIcon onClick={ () => {bounceFunction('categoriesIconNotLoggedIn')}} id='categoriesIconNotLoggedIn' icon={faTableCells}/>
             <NavLink id='loginIcon' className="navLinkIcon" to="/login"><FontAwesomeIcon id='test' icon={faLaptopCode}/></NavLink>
             <NavLink id='registrationIcon' className="navLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
           </>
@@ -58,7 +65,7 @@ console.log(user.auth)
             </>
         }
 
-        <NavLink id='contactIcon' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
+        <NavLink onClick={ () => {bounceFunction('contactIcon')}} id='contactIcon' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
 
       </section>
       
