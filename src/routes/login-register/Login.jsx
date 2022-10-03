@@ -18,14 +18,22 @@ const Login = ({auth}) => {
       try {
         const res = await fetch(`${process.env.REACT_APP_API_ADRESS}login`, {
           method: "POST",
-          headers: {"Content-type": "application/json"},
-          body: JSON.stringify({email, password})
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            email: email,
+            password: password
+          })
         })
-        console.log(res.status)
+        
         const data = await res.json()
+        console.log(res.status)
+        console.log(data)
 
         if (res.status == 200) {
           navigate("/dashboard")
+
+          localStorage.setItem('accessToken', data.user)
+
           auth()
 
         } if (res.status == 400) {
