@@ -57,8 +57,8 @@ console.log(user.auth)
               <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
             </>
         }
-   
-        <NavLink className="NavLinkText text" to="/Kontakt"> <FontAwesomeIcon className="NavLinkIcon" icon={faEnvelope}/> </NavLink>
+
+        <NavLink className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
 
       </section>
       
@@ -73,11 +73,11 @@ console.log(user.auth)
         {user.auth && 
           <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
         }
-         <NavLink className="NavLinkText text" to="/Kontakt">Kontakt</NavLink>
+         <NavLink className="NavLinkText text" to="/kontakt">Kontakt</NavLink>
       </section>
       
       <section className='search'>
-        <input
+        <input className='searchField'
          type="text" 
          name='search' 
          placeholder="Sök tjänst här..." 
