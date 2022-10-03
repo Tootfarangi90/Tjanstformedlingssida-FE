@@ -64,12 +64,8 @@
     margin-left: 3px;
 }
 
-#categoriesIconLoggedIn{
-    margin-left: 0px;
-}
-
 #loginIcon{
-    padding-left: 5px;
+    margin-left: 5px;
 }
 
 #registrationIcon{
@@ -80,9 +76,6 @@
     margin-right: 6px;
 }
 
-#contactIconLoggedIn{
-    margin-right: 0px;
-}
 
 .search {
     grid-row: 6;
