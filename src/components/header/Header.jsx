@@ -44,8 +44,6 @@ const Header = (user) => {
   return (
     <div className="HeaderContainer">
 
-      <p>Date: <input type="text" id='datepicker'/></p>
-
       <section className='logoContainer'>
       <NavLink to="/home"><img id="logo" src={img} alt="logo"/></NavLink>
       </section>
