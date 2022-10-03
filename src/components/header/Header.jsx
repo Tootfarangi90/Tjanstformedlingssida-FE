@@ -54,16 +54,18 @@ const Header = (user) => {
             <FontAwesomeIcon onClick={ () => {bounceFunction('categoriesIconNotLoggedIn')}} id='categoriesIconNotLoggedIn' icon={faTableCells}/>
             <NavLink id='loginIcon' className="navLinkIcon" to="/login"><FontAwesomeIcon id='test' icon={faLaptopCode}/></NavLink>
             <NavLink id='registrationIcon' className="navLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
+            <NavLink onClick={ () => {bounceFunction('contactIcon')}} id='contactIconNotLoggedIn' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
           </>
         }
         {user.auth &&
             <>
               <FontAwesomeIcon id='categoriesIconLoggedIn' icon={faTableCells}/>
               <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
+              <NavLink onClick={ () => {bounceFunction('contactIcon')}} id='contactIconLoggedIn' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
             </>
         }
 
-        <NavLink onClick={ () => {bounceFunction('contactIcon')}} id='contactIcon' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
+        
 
       </section>
       

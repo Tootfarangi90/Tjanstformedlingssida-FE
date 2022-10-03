@@ -65,11 +65,7 @@
 }
 
 #categoriesIconLoggedIn{
-    padding-left: 8px;
-}
-
-#profileIcon{
-    padding-left: 8px;
+    margin-left: 0px;
 }
 
 #loginIcon{
@@ -80,8 +76,12 @@
     margin-right: 3px;
 }
 
-#contactIcon{
+#contactIconNotLoggedIn{
     margin-right: 6px;
+}
+
+#contactIconLoggedIn{
+    margin-right: 0px;
 }
 
 .search {
