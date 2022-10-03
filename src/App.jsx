@@ -7,6 +7,7 @@ import {
   Link,
   Navigate
 } from "react-router-dom";
+import Kontakt from './components/footer/Kontakt';
 import Login from './routes/login-register/Login';
 import Register from './routes/login-register/Register';
 import Footer from "./components/footer/footer";
@@ -33,11 +34,12 @@ console.log(user)
         <Header auth={user}/>
         <Link to="/login" />
           <div>
-            <h1>Snowflake proxy</h1>
-            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameBorder="0" scrolling="no"></iframe>
+           
             <Routes >
               <Route path="/" element={<Home slides={CarouselData} />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/kontakt" element={<Kontakt />} />
+              
 
               {!user && (
                 <Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 

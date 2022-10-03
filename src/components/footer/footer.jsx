@@ -1,13 +1,37 @@
+import "./Footer.css"
 import React, { useState } from "react";
 
+
 function Footer() {
-  const [email, setEmail]= useState("")
-  const [text, setText]= useState("")
-  console.log(email)
-  console.log(text)
+  
+
+
+
+
   return (
     <div className="container">
-      <form className="form">
+      <div className="snowflake">
+      <h1>Snowflake proxy</h1>
+            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameBorder="0" scrolling="no"></iframe>
+      </div>
+    <div className="lists">
+      <ul><h2>info</h2>
+      <li><a href="">Hur fungerar det</a></li>
+      <li><a href="">FAQ</a></li>
+      <li><a href="">Nyheter</a></li>
+      </ul>
+     
+      <ul><h2>Kontakt</h2>
+      <li><a href="">Facebook</a></li>
+      <li><a href="">Instagram</a></li>
+      <li><a href="">Twitch</a></li>
+      
+      </ul>
+    </div>
+
+  
+
+      {/* <form className="form">
      
      <input type="email"
       name="email" 
@@ -28,10 +52,12 @@ function Footer() {
     />
     </div>
 
-<button type="submit" >Send</button>
-     
-    </form> 
-    
+<button
+ type="submit" 
+ onClick={register}
+ >Send</button> */}
+
+
     </div>
   );
 }

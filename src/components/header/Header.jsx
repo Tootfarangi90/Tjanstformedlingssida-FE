@@ -57,7 +57,9 @@ console.log(user.auth)
               <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
             </>
         }
-        <FontAwesomeIcon className="navLinkIcon" icon={faEnvelope}/>
+   
+        <NavLink className="NavLinkText text" to="/Kontakt"> <FontAwesomeIcon className="NavLinkIcon" icon={faEnvelope}/> </NavLink>
+
       </section>
       
       <section className='dashBoardTextContainer'>
@@ -71,7 +73,7 @@ console.log(user.auth)
         {user.auth && 
           <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
         }
-        <a class='text'>Kontakt</a>
+         <NavLink className="NavLinkText text" to="/Kontakt">Kontakt</NavLink>
       </section>
       
       <section className='search'>
@@ -86,7 +88,7 @@ console.log(user.auth)
       <section className='registeredUsersCount'>
         <p class='text'>Vi har för närvarande {users.users} registrerade användare!</p>
       </section>
-      
+
     </div>
   )
 
