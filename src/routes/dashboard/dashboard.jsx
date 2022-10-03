@@ -3,6 +3,14 @@ import "./dashboard.css"
 
 const dashboard = ({logout}) => {
 
+  const handleLogout = () => {
+
+    localStorage.removeItem('accessToken')
+
+    logout()
+
+  }
+ 
   return (
     <div>
 
@@ -10,7 +18,7 @@ const dashboard = ({logout}) => {
 
       <p>Välkommen till din profil</p>
 
-      <button onClick={() => logout()}>Logga ut</button>
+      <button onClick={() => handleLogout()}>Logga ut</button>
 
     </div>
   )
