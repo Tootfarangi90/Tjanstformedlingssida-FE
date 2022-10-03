@@ -18,7 +18,7 @@ console.log(user.auth)
 
   const [users, setUsers] = useState([])
   
-console.log(users.users)
+
 
   const get = () => {
   
@@ -33,6 +33,8 @@ console.log(users.users)
       })
   }
 
+  
+
 
   return (
     <div className="HeaderContainer">
@@ -42,21 +44,20 @@ console.log(users.users)
       </section>
       
       <section className='dashboardIconContainer'>
-        
         {!user.auth && 
           <>
             <FontAwesomeIcon id='categoriesIconNotLoggedIn' icon={faTableCells}/>
-            <NavLink id='loginIcon' className="NavLinkIcon" to="/login"><FontAwesomeIcon icon={faLaptopCode}/></NavLink>
-            <NavLink id='registrationIcon' className="NavLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
+            <NavLink id='loginIcon' className="navLinkIcon" to="/login"><FontAwesomeIcon id='test' icon={faLaptopCode}/></NavLink>
+            <NavLink id='registrationIcon' className="navLinkIcon" to="/register"><FontAwesomeIcon icon={faUsers}/></NavLink>
           </>
         }
         {user.auth &&
             <>
               <FontAwesomeIcon id='categoriesIconLoggedIn' icon={faTableCells}/>
-              <NavLink id='profileIcon' className="NavLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
+              <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
             </>
         }
-        <FontAwesomeIcon className="NavLinkIcon" icon={faEnvelope}/>
+        <FontAwesomeIcon className="navLinkIcon" icon={faEnvelope}/>
       </section>
       
       <section className='dashBoardTextContainer'>
@@ -85,8 +86,7 @@ console.log(users.users)
       <section className='registeredUsersCount'>
         <p class='text'>Vi har för närvarande {users.users} registrerade användare!</p>
       </section>
-
-
+      
     </div>
   )
 
