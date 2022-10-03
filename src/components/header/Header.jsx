@@ -13,11 +13,15 @@ import 'jquery-ui-dist/jquery-ui'
 
 const Header = (user) => {
 
-
+  
   useEffect(() => {
+    if(user.auth){
+      foldFunction('test')
+      foldFunction('test2')
+    }
     
     get();
-  }, []);
+  }, [user.auth]);
 
   const [users, setUsers] = useState([])
   
@@ -29,7 +33,7 @@ const Header = (user) => {
       .then(response => response.json())
       .then((responseJson) => {
         
-        setUsers(responseJson)
+        setUsers(responseJson);
       })
       .catch(error => {
         console.log(error)
@@ -38,6 +42,10 @@ const Header = (user) => {
 
   const bounceFunction = (props) => {
     $(`#${props}`).effect('bounce', 500);
+  }
+
+  const foldFunction = (props) => {
+    $(`#${props}`).effect('fold', 1000);
   }
 
 
@@ -59,7 +67,9 @@ const Header = (user) => {
         }
         {user.auth &&
             <>
-              <FontAwesomeIcon id='categoriesIconLoggedIn' icon={faTableCells}/>
+              <FontAwesomeIcon onClick={ () => {bounceFunction('categoriesIconLoggedIn')}} id='categoriesIconLoggedIn' icon={faTableCells}/>
+              <FontAwesomeIcon className="navLinkIcon" id='test' icon={faLaptopCode}/>
+              <FontAwesomeIcon className="navLinkIcon" id='test2' icon={faUsers}/>
               <NavLink id='profileIcon' className="navLinkIcon" to="/dashboard"><FontAwesomeIcon icon={faUser}/></NavLink>
               <NavLink onClick={ () => {bounceFunction('contactIconLoggedIn')}} id='contactIconLoggedIn' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
             </>
