@@ -16,11 +16,7 @@ import Home from "./components/home/Home";
 import Dashboard from './routes/dashboard/dashboard';
 import { CarouselData } from './components/home/CarouselData';
 import Allcategories from './routes/categories/Allcategories';
-
-
-
-
-
+import Tjänster from './routes/tjänster/Tjänster';
 
 
 function App() {
@@ -54,6 +50,8 @@ console.log(user)
               <Route path="*" element={<Navigate to={"/"} />} />
 
               <Route path="/allcategories" element={<Allcategories />} />
+
+              <Route path="/services" element={<Tjänster />} />
             </Routes>
           </div>
       </Router>

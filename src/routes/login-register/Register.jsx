@@ -6,7 +6,7 @@ const Register = () => {
     const [firstname, setFirstname]     = useState('')
     const [lastname, setLastname]       = useState('')
     const [email, setEmail]             = useState('')
-    const [occupation, setOccupation]   = useState('')
+    const [username, setUsername]   = useState('')
     const [password, setPassword]       = useState('')
     const [message, setMessage]         = useState('')
 
@@ -14,7 +14,7 @@ const Register = () => {
     const lastnameChanged   = (e) => setLastname(e.target.value)
     const emailChanged      = (e) => setEmail(e.target.value)
     const passwordChanged   = (e) => setPassword(e.target.value)
-    const occupationChanged = (e) => setOccupation(e.target.value)
+    const usernameChanged = (e) => setUsername(e.target.value)
 
 
    async function registerUser(e) {
@@ -27,9 +27,9 @@ const Register = () => {
         body: JSON.stringify({
           firstname, 
           lastname, 
+          username,
           email, 
-          password, 
-          occupation
+          password
         })
       })
       
@@ -89,7 +89,17 @@ const Register = () => {
         placeholder="Efternamn"
         onChange={lastnameChanged}
         />
-<div className="input-group">
+
+        <div className="input-group">
+          <input type="username" 
+          name='username' 
+          value={username} 
+          placeholder="Användarnamn"
+          onChange={usernameChanged}
+          />
+
+      </div>
+      <div className="input-group">
 
         <input 
         type="email" 
@@ -109,18 +119,6 @@ const Register = () => {
         onChange={passwordChanged}
         />
 
-        </div>
-
-        <div className="input-group">
-        <input 
-        type="text" 
-        
-        name="occupation" 
-        value={occupation} 
-        placeholder="Sysselsättning"
-        onChange={occupationChanged} 
-        />
-        
         </div>
 
         <button className='button'>Skapa konto</button>
