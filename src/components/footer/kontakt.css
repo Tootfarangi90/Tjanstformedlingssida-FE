@@ -1,0 +1,17 @@
+.kontaktmail {
+    text-decoration: none;
+    color: inherit;
+    
+    border-radius: 2px;
+    color: #0F292E;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.kontaktmail:hover {
+transition: 0.5s;
+background-color: rgba(128, 128, 128, 0.299);
+color: #0F292E;
+border-radius: 2px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 0px;
+}

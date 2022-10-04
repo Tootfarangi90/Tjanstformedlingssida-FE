@@ -11,8 +11,7 @@ function Footer() {
   return (
     <div className="container">
       <div className="snowflake">
-      <h1>Snowflake proxy</h1>
-            <iframe src="https://snowflake.torproject.org/embed.html" width="320" height="240" frameBorder="0" scrolling="no"></iframe>
+
       </div>
     <div className="lists">
       <ul><h2>info</h2>
