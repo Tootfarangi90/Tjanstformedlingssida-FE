@@ -11,17 +11,18 @@ import 'jquery-ui-dist/jquery-ui'
 
 
 
-const Header = (user) => {
+const Header = () => {
 
+const token = localStorage.getItem('accessToken')
   
   useEffect(() => {
-    if(user.auth){
+    if(token){
       foldFunction('test')
       foldFunction('test2')
     }
     
     get();
-  }, [user.auth]);
+  }, [token]);
 
   const [users, setUsers] = useState([])
   
@@ -57,7 +58,7 @@ const Header = (user) => {
       </section>
       
       <section className='dashboardIconContainer'>
-        {!user.auth && 
+        {!token && 
           <>
             <FontAwesomeIcon onClick={ () => {bounceFunction('categoriesIconNotLoggedIn')}} id='categoriesIconNotLoggedIn' icon={faTableCells}/>
             <NavLink onClick={ () => {bounceFunction('loginIcon')}} id='loginIcon' className="navLinkIcon" to="/login"><FontAwesomeIcon id='test' icon={faLaptopCode}/></NavLink>
@@ -65,7 +66,7 @@ const Header = (user) => {
             <NavLink onClick={ () => {bounceFunction('contactIconNotLoggedIn')}} id='contactIconNotLoggedIn' className="navLinkIcon" to="/kontakt"><FontAwesomeIcon icon={faEnvelope}/></NavLink>
           </>
         }
-        {user.auth &&
+        {token &&
             <>
               <FontAwesomeIcon onClick={ () => {bounceFunction('categoriesIconLoggedIn')}} id='categoriesIconLoggedIn' icon={faTableCells}/>
               <FontAwesomeIcon className="navLinkIcon" id='test' icon={faLaptopCode}/>
@@ -81,13 +82,13 @@ const Header = (user) => {
       
       <section className='dashBoardTextContainer'>
         <a class='text'>Kategorier</a>
-        {!user.auth &&
+        {!token &&
           <>
             <NavLink className="NavLinkText text" title='testTitle' to="/login">Login</NavLink>
             <NavLink className="NavLinkText text" data-testid='testid' to="/register">Registrera</NavLink>
           </>
         }
-        {user.auth && 
+        {token && 
           <NavLink className="NavLinkText text" to="/dashboard">Profil</NavLink>
         }
          <NavLink className="NavLinkText text" to="/kontakt">Kontakt</NavLink>
