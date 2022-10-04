@@ -21,13 +21,14 @@ import Tjänster from './routes/tjänster/Tjänster';
 
 function App() {
 
-const [user, setUser] = useState(null)
+const token = localStorage.getItem('accessToken')
 
-console.log(user)
+const [useToken, setuseToken] = useState(token)
+
   return (
     <div className="App">
       <Router>
-        <Header auth={user}/>
+        <Header />
         <Link to="/login" />
           <div>
            
@@ -37,15 +38,15 @@ console.log(user)
               <Route path="/kontakt" element={<Kontakt />} />
               
 
-              {!user && (
-                <Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
+              {!useToken && (
+                <Route path="/login" element={<Login auth={() => setuseToken(true)}/>} /> 
               )}
 
-              {user && (
-                <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
+              {useToken && (
+                <Route path="/dashboard" element={<Dashboard logout={() => setuseToken(false)}/>} /> 
               )}
 
-              <Route path="/dashboard" element={<Navigate to={user ? "/dashboard" : "/login"}/>} />
+              <Route path="/dashboard" element={<Navigate to={token ? "/dashboard" : "/login"}/>} />
 
               <Route path="*" element={<Navigate to={"/"} />} />
 
