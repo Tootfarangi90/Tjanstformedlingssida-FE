@@ -64,25 +64,18 @@
     margin-left: 3px;
 }
 
-#categoriesIconLoggedIn{
-    padding-left: 8px;
-}
-
-#profileIcon{
-    padding-left: 8px;
-}
-
 #loginIcon{
-    padding-left: 5px;
+    margin-left: 5px;
 }
 
 #registrationIcon{
     margin-right: 3px;
 }
 
-#contactIcon{
+#contactIconNotLoggedIn{
     margin-right: 6px;
 }
+
 
 .search {
     grid-row: 6;
