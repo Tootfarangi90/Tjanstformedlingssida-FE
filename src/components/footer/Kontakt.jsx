@@ -1,5 +1,5 @@
 import {useState} from 'react'
-
+import "./kontakt.css"
 
 function kontakt() {  
 const [email, setEmail]= useState("")
@@ -46,6 +46,10 @@ return (
   
   
   />
+  </div>
+  <div>
+
+  <a className="kontaktmail" href="mailto:Akutraketen-development@mail.com?subject=Skriv in ditt ämne här!&body=Skriv ditt meddelande till oss här">Kontakta Akutraketens team</a>
   </div>
 
 <button
