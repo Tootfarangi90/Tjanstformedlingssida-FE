@@ -24,22 +24,13 @@ function App() {
 
 const token = localStorage.getItem('accessToken')
 
-const [useToken, setuseToken] = useState(token)
+const [user, setUser] = useState(null)
 
-<<<<<<< HEAD
-console.log("User: " + user)
+
   return (
     <div className="App">
       <Router>
-        {/* <Header auth={user} /> */}
         <NavbarHeader auth={user} />
-=======
-  return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Link to="/login" />
->>>>>>> f60c2f0702e5a04df3a0e32b656833bdd1ac1968
           <div>
            
             <Routes >
@@ -49,17 +40,16 @@ console.log("User: " + user)
           
               
 
-              {!useToken && (
-                <Route path="/login" element={<Login auth={() => setuseToken(true)}/>} /> 
+              {!user && (
+                <Route path="/login" element={<Login auth={() => setUser(true)}/>} /> 
               )}
 
-              {useToken && (
-                <Route path="/dashboard" element={<Dashboard logout={() => setuseToken(false)}/>} /> 
+              {user && (
+                <Route path="/dashboard" element={<Dashboard logout={() => setUser(false)}/>} /> 
               )}
 
               <Route path="/dashboard" element={<Navigate to={token ? "/dashboard" : "/login"}/>} />
 
-              <Route path="*" element={<Navigate to={"/"} />} />
 
               <Route path="/allcategories" element={<Allcategories />} />
 
