@@ -4,14 +4,13 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
   Navigate
 } from "react-router-dom";
 import Kontakt from './components/footer/Kontakt';
 import Login from './routes/login-register/Login';
 import Register from './routes/login-register/Register';
 import Footer from "./components/footer/footer";
-import Header from "./components/header/Header";
+// import Header from "./components/header/Header";
 import Home from "./components/home/Home";
 import Dashboard from './routes/dashboard/dashboard';
 import { CarouselData } from './components/home/CarouselData';
@@ -19,22 +18,25 @@ import Allcategories from './routes/categories/Allcategories';
 import Tjänster from './routes/tjänster/Tjänster';
 
 
+import NavbarHeader from './components/navbar/NavbarHeader';
+
 function App() {
 
 const [user, setUser] = useState(null)
 
-console.log(user)
+console.log("User: " + user)
   return (
     <div className="App">
       <Router>
-        <Header auth={user}/>
-        <Link to="/login" />
+        {/* <Header auth={user} /> */}
+        <NavbarHeader auth={user} />
           <div>
            
             <Routes >
               <Route path="/" element={<Home slides={CarouselData} />} />
               <Route path="/register" element={<Register />} />
               <Route path="/kontakt" element={<Kontakt />} />
+          
               
 
               {!user && (

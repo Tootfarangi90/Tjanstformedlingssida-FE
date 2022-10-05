@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inconsolata&family=Stylish&display=swap');
+
+.header-img {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap; 
+    background-image: url('./img/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    justify-content: center;
+}
+.navbar-container {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    font-size: large;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #acacac0e;
+    padding-bottom: 5px;
+}
+.navbar-container a, h1, p {
+    color: #0F292E;
+}
+
+[class*='flex-'] {
+    display: flex;
+    align-items: center;
+}
+.flex-left {
+    flex: 1;
+    justify-content: flex-start;
+}
+.flex-left a {
+    text-decoration: none;
+    font-family: 'Inconsolata', monospace;
+  
+}
+.flex-middle {
+    flex: 4;
+    justify-content: center;
+}
+.flex-right {
+    flex: 1;
+    justify-content: flex-end;  
+}
+.flex-middle ul{
+    display: flex;
+    list-style: none;
+    gap: 60px;
+  }
+
+.flex-middle a {
+    text-decoration: none;
+    display:inline-block;
+    /* padding-bottom: 10px; */
+
+}
+
+.flex-middle a:hover {
+    transition: 0.5s;
+    background-color: rgba(128, 128, 128, 0.299);
+    color: #0F292E;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 0px;
+}
+
+.searchbar{
+    display: flex;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.text {
+    font-size: medium;
+}
+
