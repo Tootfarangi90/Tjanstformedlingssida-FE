@@ -26,7 +26,7 @@ let post = async (e)=>{
   }
 }
 return (
-  <div className='main'>
+  <div className='kontaktmain'>
     
     <section className='kontaktdiv'>
        <a className="kontaktmail" href="mailto:Akutraketen-development@mail.com?subject=Skriv in ditt ämne här!&body=Skriv ditt meddelande till oss här">Kontakta Akutraketens team</a>
