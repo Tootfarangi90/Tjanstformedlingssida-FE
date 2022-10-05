@@ -61,6 +61,6 @@
         phone:'Phone - +4670 070 70 05',
         mail:<a href="mailto:name@email.com">mailname@email.com</a>,
         text:'Hello, as the title says, im a masterchef that is open for work!',
-        img:'https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=377&q=80'
+        img:'https://images.unsplash.com/photo-1622021142947-da7dedc7c39a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
     },
 ]

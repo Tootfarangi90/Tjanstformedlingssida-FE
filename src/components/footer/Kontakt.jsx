@@ -26,7 +26,20 @@ let post = async (e)=>{
   }
 }
 return (
-  <div>
+  <div className='kontaktmain'>
+    
+    <section className='kontaktdiv'>
+       <a className="kontaktmail" href="mailto:Akutraketen-development@mail.com?subject=Skriv in ditt ämne här!&body=Skriv ditt meddelande till oss här">Kontakta Akutraketens team</a>
+
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    {/*
     <form className="form">
    
    <input type="email"
@@ -49,7 +62,6 @@ return (
   </div>
   <div>
 
-  <a className="kontaktmail" href="mailto:Akutraketen-development@mail.com?subject=Skriv in ditt ämne här!&body=Skriv ditt meddelande till oss här">Kontakta Akutraketens team</a>
   </div>
 
 <button
@@ -57,7 +69,9 @@ type="submit"
 onClick={post}
 >Send</button> 
 </form>
+*/}
   </div>
+
 )
 }
 
