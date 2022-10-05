@@ -27,12 +27,13 @@ const token = localStorage.getItem('accessToken')
 const [useToken, setuseToken] = useState(token)
 
 
+
   return (
     <div className="App">
       <Router>
-        {/* <Header /> */}
+  
         <NavbarHeader auth={useToken} />
-     
+
           <div>
            
             <Routes >
@@ -52,7 +53,6 @@ const [useToken, setuseToken] = useState(token)
 
               <Route path="/dashboard" element={<Navigate to={token ? "/dashboard" : "/login"}/>} />
 
-              <Route path="*" element={<Navigate to={"/"} />} />
 
               <Route path="/allcategories" element={<Allcategories />} />
 
