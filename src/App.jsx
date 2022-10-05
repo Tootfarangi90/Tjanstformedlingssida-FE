@@ -26,20 +26,13 @@ const token = localStorage.getItem('accessToken')
 
 const [useToken, setuseToken] = useState(token)
 
-<<<<<<< HEAD
-console.log("User: " + user)
+
   return (
     <div className="App">
       <Router>
-        {/* <Header auth={user} /> */}
-        <NavbarHeader auth={user} />
-=======
-  return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Link to="/login" />
->>>>>>> f60c2f0702e5a04df3a0e32b656833bdd1ac1968
+        {/* <Header /> */}
+        <NavbarHeader auth={useToken} />
+     
           <div>
            
             <Routes >
