@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./headerImg.css";
-import Login from "../../routes/login-register/Login";
+
 
 export default function HeaderImg(user) {
   const [TotalUsers, setTotalUsers] = useState([]);
@@ -27,7 +27,7 @@ export default function HeaderImg(user) {
     <div className="header-img">
       <div className="header-content">
         <div className="header-login">
-        <Login />
+        Nånting
         </div>
         <div className="header-register">
         <p className='text'>{TotalUsers.users} registrerade användare!</p>

@@ -12,7 +12,7 @@
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: #acacac0e;
+    background-color: rgba(255, 255, 255, 0.505);
     padding-bottom: 5px;
     font-family: 'Inconsolata', monospace; 
 }
@@ -23,6 +23,7 @@
     list-style: none;
     gap: 60px;
     text-decoration: none;
+    font-size: large;
 }
 
 [class*='flex-'] {

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inconsolata&family=Stylish&display=swap');
 body, html {
     width: 100%;
     height: 100vh;
@@ -22,7 +23,7 @@ body, html {
     color: white;
     border-radius: 2px;
     transition: 0.5s;
-    font-family: inherit;
+    font-family: 'Inconsolata', monospace; 
 }
   .btn-primary:hover{
     background-color: white;
@@ -53,7 +54,7 @@ body, html {
   background-color: transparent;
   padding: 5px;
   border-radius: 2px;
-  font-family: inherit;
+  font-family: 'Inconsolata', monospace; 
   height: 35px;
   margin: 10px;
 }

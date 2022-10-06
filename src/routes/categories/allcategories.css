@@ -1,11 +1,35 @@
 .main {
     display: flex;
+    height: 100vh;
+    overflow-x: scroll;
 }
+
 .category-items{
     border-bottom: 2px solid rgb(179, 179, 179);
     width: 60%;
     
 }
+.nav-left{
+flex: 1;
+position: -webkit-sticky; 
+position: sticky;
+top: 0;
+}
+.nav-right {
+    flex: 2;
+    overflow-x: scroll;
+    height: 100vh;
+
+}
+.main::-webkit-scrollbar {
+    display: none;
+  }
+.nav-right::-webkit-scrollbar {
+    display: none;
+  }
+.nav-left::-webkit-scrollbar {
+    display: none;
+  }
 .title {
     margin: 10px;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -65,10 +89,6 @@ border-radius: 4px;
     padding-left: 25px;
 }
 .nav {
-    flex: 1;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
     margin-top: 10px;
     padding-top:5px;
     margin-left: 10%;

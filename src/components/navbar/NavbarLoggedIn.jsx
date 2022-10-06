@@ -19,13 +19,13 @@ export default function NavbarLoggedIn({ logout }) {
       <nav className="flex-middle">
         <ul>
           <li>
-            <Link to="/dashboard"> Profil </Link>
+            <Link to="/dashboard" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Profil </Link>
           </li>
           <li>
-            <Link to="/allcategories"> Kategorier </Link>
+            <Link to="/allcategories" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Kategorier </Link>
           </li>
           <li>
-            <Link to="/kontakt">Kontakt </Link>
+            <Link to="/kontakt" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}>Kontakt </Link>
           </li>
         </ul>
       </nav>
