@@ -63,29 +63,26 @@ classDiagram
 
 ## TTFHW
 
-To access the repository, make sure you are a collaborator, so that you can clone the repo in your workspace folder with this command:
+To access the repository, make sure you are a collaborator, so that you can clone the repo in your workspace folder with these commands:
 
 ```javascript
+cd ~
+cd ws
 git clone: https://github.com/Tootfarangi90/Tjanstformedlingssida-BE.git
-```
-
-How to receive the latest data:
-
-```javascript
-git pull
-```
-
-How to install all current modules:
-
-```javascript
+touch .env
+CURL -L https://gist.githubusercontent.com/rob9099/f879f8e5162d48484195ba481ae765d1/raw/c79604313b432587dc5b52c26527b843a4a118d7/.env -o .env
 npm i
-```
-
-How to open up the project at Visual studio code: 
-
-```javascript
+npm pkg set scripts.test="react-scripts test --verbose --watchAll=false"
+echo "node_modules" > .gitignore
+echo "logs" >> .gitignore
+echo "*.log" >> .gitignore
+echo "node_modules/" >> .gitignore
+echo ".env" >> .gitignore
+echo ".env.test" >> .gitignore
 code .
 ```
+
+
 
 ### Testing
 

@@ -3,30 +3,35 @@ import { Link } from "react-router-dom";
 
 import "./navbar.css";
 
-export default function NavbarLoggedIn({logout}) {
+export default function NavbarLoggedIn({ logout }) {
   const handleLogout = () => {
+    localStorage.removeItem("accessToken");
 
-    localStorage.removeItem('accessToken')
-
-    logout()
-
-  }
+    logout();
+  };
   return (
-    <nav className="flex-middle">
-      <ul>
-        <li>
-          <Link to="/dashboard"> Profil </Link>
-        </li>
-        <li>
-          <Link to="/allcategories"> Kategorier </Link>
-        </li>
-        <li>
-          <Link to="/kontakt">Kontakt </Link>
-        </li>
-        <li>
-          <Link to="/" onClick={() => handleLogout()}>Logga ut</Link>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <div className="flex-left">
+        <Link to="/">
+          <h1>akutraketen</h1>
+        </Link>
+      </div>
+      <nav className="flex-middle">
+        <ul>
+          <li>
+            <Link to="/dashboard" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Profil </Link>
+          </li>
+          <li>
+            <Link to="/allcategories" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Kategorier </Link>
+          </li>
+          <li>
+            <Link to="/kontakt" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}>Kontakt </Link>
+          </li>
+        </ul>
+      </nav>
+      <section className="flex-right">
+            <Link to="/" onClick={() => handleLogout()}>Logga ut</Link>
+      </section>
+    </>
   );
 }

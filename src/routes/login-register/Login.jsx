@@ -60,10 +60,10 @@ const Login = ({auth}) => {
     
   return (
 
-    <>
+  
 
     <div>
-        <h1>Logga in här</h1>
+        <section><h1>Logga in här</h1></section>
 
       <form onSubmit={loginUser}>
 
@@ -107,7 +107,6 @@ const Login = ({auth}) => {
     </form>
 </div>
 
-    </>
   )
 }
 

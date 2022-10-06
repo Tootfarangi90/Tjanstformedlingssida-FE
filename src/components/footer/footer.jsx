@@ -9,7 +9,7 @@ function Footer() {
 
 
   return (
-    <div className="container">
+    <div className="footer-container">
       <div className="snowflake">
 
       </div>

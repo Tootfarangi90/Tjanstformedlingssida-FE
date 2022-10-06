@@ -21,6 +21,7 @@ const Allcategories = () => {
   return (
     <>
       <div className='main'>
+<div className="nav-left">
 
         <nav className='nav'>
             <button className='btn' onClick={()=> setData (CarouselData)}>All</button>  
@@ -32,7 +33,8 @@ const Allcategories = () => {
             
         </nav>
 
-      <section className='category-items'>
+</div>
+      <section className='nav-right'>
         {data.map((values) => {
           const{id, name, category, img, text, phone, mail} = values;
           return (
