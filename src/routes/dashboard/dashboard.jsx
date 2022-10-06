@@ -16,15 +16,15 @@ const dashboard = ({logout}) => {
   }
 
   return (
-    <div>
+    <div className='dashboard-div'>
 
-      <h1>Dashboard</h1>
+      <h1 className='dashboard-title'>Dashboard</h1>
 
 
-          <p>Välkommen till din profil</p>
+          <p className='welcome-title'>Välkommen till din profil</p>
 
-          <button onClick={() => navigate("/advertisement")}>Annonsera din tjänst</button>
-          <button onClick={() => handleLogout()}>Logga ut</button>
+          <button className='user-btn' onClick={() => navigate("/advertisement")}>Annonsera din tjänst</button>
+          <button className='user-btn' onClick={() => handleLogout()}>Logga ut</button>
 
     </div>
   )
