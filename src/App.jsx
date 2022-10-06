@@ -12,6 +12,7 @@ import Allcategories from './routes/categories/Allcategories';
 import Dashboard from './routes/dashboard/dashboard';
 import Register from './routes/login-register/Register';
 import Login from './routes/login-register/Login';
+import Categories from './routes/categories/Categories';
 
 
 // Components
@@ -42,6 +43,7 @@ const [useToken, setuseToken] = useState(token)
               )}
               <Route path="/dashboard" element={<Navigate to={token ? "/dashboard" : "/login"}/>} />
               <Route path="/allcategories" element={<Allcategories />} />
+              <Route path="/categories" element={<Categories />} />
               <Route path="/services" element={<Tjänster />} />
             </Routes>
           

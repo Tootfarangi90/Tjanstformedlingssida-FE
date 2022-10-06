@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inconsolata&family=Stylish&display=swap');
+
+
+.category-container {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    overflow-x: scroll;
+    height: 90vh;
+    font-size: xx-large;
+    font-family: 'Inconsolata', monospace
+}
+.category-container::-webkit-scrollbar {
+    display: none;
+}
+/*Categories*/
+.category-items{
+    border-bottom: 2px solid rgb(179, 179, 179);
+    width:65%;
+    height: 100vh;
+    font-family: 'Inconsolata', monospace
+}
+.category-right{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'Inconsolata', monospace
+}
+.all-categories {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    font-family: 'Inconsolata', monospace
+}
+/*Navbar*/
+.top-nav{
+    flex: 1;
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+}
+.inner-nav {
+    display: flex;
+    flex-direction: row;
+    background: transparent;
+}
+.btn-top{
+    text-transform: uppercase;
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    width: 160px;
+    border: 3px solid #0F292E;
+    color:#0F292E;
+    border-radius: 2px;
+    transition: 0.5s;
+    font-family: inherit;
+}
+.btn-top:hover{
+    background-color: black;
+    color: white;
+    font-weight: 700; 
+}
+/*Text-css*/
+
+.title {
+    margin: 10px;
+    color: #24636B;
+    font-family: 'Inconsolata', monospace
+}
+.cat {
+    margin: 10px;
+    color: #0F292E;
+    font-family: 'Inconsolata', monospace
+}
+.text {
+    margin: 10px;
+    font-size: 20px;
+    width: 60%;
+    margin: 0 auto;
+}
+.phone {
+    margin: 10px;
+    color: #47B4C2;
+    font-size: large ;
+}
+
+/*Image*/
+.service-img {
+    margin: 10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}

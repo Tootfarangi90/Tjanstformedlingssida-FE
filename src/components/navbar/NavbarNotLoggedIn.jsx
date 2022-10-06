@@ -15,6 +15,9 @@ export default function NavbarNotLoggedIn() {
     <nav className="flex-middle">
       <ul>
         <li>
+          <Link to="/categories" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Category </Link>
+        </li>
+        <li>
           <Link to="/allcategories" onClick={() => scrollBy({ top: 700, left: 0, behavior: "smooth" })}> Kategorier </Link>
         </li>
         <li>

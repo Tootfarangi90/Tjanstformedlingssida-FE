@@ -1,5 +1,5 @@
 import React from 'react'
-import './header.css'
+// import './header.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faEnvelope, faUser, faTableCells, faLaptopCode, faUsers} from '@fortawesome/free-solid-svg-icons'
 import img from './logo.png'
