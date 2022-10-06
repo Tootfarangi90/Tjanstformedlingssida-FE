@@ -1,28 +1,20 @@
-#main-title {
-    color: #FF5912;
-}
-
 .carousel {
     position: relative;
-    height:40vh;
     display:flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
-
 .img {
-    width: 260px;
-    height: 260px;
+    width: 500px;
+    height: 500px;
     border-radius: 50%;
-    border:1px solid;
-    border-color: #FF5912;
+    object-fit: cover;
 }
 .img:hover {
-    width: 290px;
-    height: 290px;
+    width: 550px;
+    height: 550px;
     transition:ease-in-out 0.15s;
-    border: 3.5px solid;
-    border-color: #FF5912;
     cursor: pointer;
 }
 

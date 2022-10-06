@@ -1,0 +1,33 @@
+.header-img {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('./img/header.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.header-content {
+    display:flex;
+    width: 100%;
+}
+.header-login {
+    width: 50%;
+}
+.header-register {
+    width: 50%;
+}
+.searchbar{
+    display: flex;
+    height: fit-content;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    margin: 0 auto;
+}
+.text {
+    font-size: medium;
+}
