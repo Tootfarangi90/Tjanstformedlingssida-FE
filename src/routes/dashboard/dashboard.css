@@ -1,17 +1,42 @@
-button {
-    width: 25%;
-    height: 35px;
-    background-color: #FF5912;
-    border: 1px solid black;
-    border-radius: 25px;
-    margin: 10px;
-  }
-  
-  button:hover {
-    background-color: #ff8550;
-    cursor: pointer;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inconsolata&family=Stylish&display=swap');
 
-  h1 {
-    color: #FF5912;
+.dashboard-div{
+  font-family: 'Inconsolata', monospace; 
+height:500px;
+}
+
+.dashboard-title {
+  padding-top: 20px;
+}
+
+.welcome-title {
+height:100px;
+padding-top: 20px;
+}
+
+.user-btn{
+    
+    margin-right: 10px;
+    width: 30%;
+    height:40px;
+    border: 3px solid rgb(0, 0, 0);
+    color: #0F292E;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin-top:20px;
+    font-size: larger;
+    background: linear-gradient(
+      180deg,
+      rgba(34, 77, 80, 0.4) 5%,
+      rgba(255, 255, 255, 0.6) 90%
+    );
+  }
+  .user-btn:hover{
+    background-color: #0F292E;
+    color: white;
+    background: linear-gradient(
+      60deg,
+      rgba(34, 77, 80, 0.4) 200%,
+      rgba(255, 255, 255, 0.6) 90%
+    );
   }
