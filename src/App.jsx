@@ -45,6 +45,9 @@ const [useToken, setuseToken] = useState(token)
               <Route path="/allcategories" element={<Allcategories />} />
               <Route path="/categories" element={<Categories />} />
               <Route path="/services" element={<Tjänster />} />
+
+              <Route path="/advertisement" element={<Tjänster />} />
+              
             </Routes>
           
     <Footer />

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 
 const dashboard = ({logout}) => {
 
-let navigate = useNavigate()
+  const navigate = useNavigate()
+
 
   const handleLogout = () => {
 
@@ -14,22 +15,16 @@ let navigate = useNavigate()
 
   }
 
-  const displayServices = () => {
-
-    navigate("/services")
-
-  }
-
   return (
-    <div>
+    <div className='dashboard-div'>
 
-      <h1>Dashboard</h1>
+      <h1 className='dashboard-title'>Dashboard</h1>
 
-      <p>Välkommen till din profil</p>
 
-      <button onClick={() => displayServices()}>Annonsera din tjänst</button>
+          <p className='welcome-title'>Välkommen till din profil</p>
 
-      <button onClick={() => handleLogout()}>Logga ut</button>
+          <button className='user-btn' onClick={() => navigate("/advertisement")}>Annonsera din tjänst</button>
+          <button className='user-btn' onClick={() => handleLogout()}>Logga ut</button>
 
     </div>
   )

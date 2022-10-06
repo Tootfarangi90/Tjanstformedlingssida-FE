@@ -63,16 +63,17 @@ const Register = () => {
 
 
     <>
-    <section id="form">
+    <section className="login-div">
     <h1>Registrera dig här</h1>
 
     <form onSubmit={registerUser}>
 
 
-<div className="input-group">
+<div className='login-form'>
     <p className='messageBox'>{message}</p>
 
         <input
+        className='email-input'
          type="text" 
          name='firstname' 
          value={firstname} 
@@ -83,6 +84,7 @@ const Register = () => {
          </div>
 
         <input 
+        className='email-input'
         type="text" 
         name='lastname' 
         value={lastname} 
@@ -90,8 +92,9 @@ const Register = () => {
         onChange={lastnameChanged}
         />
 
-        <div className="input-group">
+        <div className='login-form'>
           <input type="username" 
+          className='email-input'
           name='username' 
           value={username} 
           placeholder="Användarnamn"
@@ -99,9 +102,10 @@ const Register = () => {
           />
 
       </div>
-      <div className="input-group">
+      <div className='login-form'>
 
         <input 
+        className='email-input'
         type="email" 
         name='email' 
         value={email} 
@@ -109,9 +113,10 @@ const Register = () => {
         onChange={emailChanged}
         />
         </div>
-        <div className="input-group">
+        <div className='login-form'>
 
         <input 
+        className='email-input'
         type="password" 
         name='password' 
         value={password} 
@@ -121,7 +126,7 @@ const Register = () => {
 
         </div>
 
-        <button className='button'>Skapa konto</button>
+        <button className='login-knapp'>Skapa konto</button>
 
         <div className='Account'>
         Har du redan ett konto? <Link to="/login">Logga in här</Link>

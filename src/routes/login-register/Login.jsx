@@ -62,16 +62,20 @@ const Login = ({auth}) => {
 
   
 
-    <div>
-        <section><h1>Logga in här</h1></section>
+    <div className='login-div'>
 
-      <form onSubmit={loginUser}>
+        <section className='login-title'>
+          <h1>Logga in här</h1>
+        </section>
+
+      <form className='login-form' onSubmit={loginUser}>
 
         <p className='messageBox'>{message}</p>
 
-            <div>
+            <div className='email-inputdiv'>
             <legend>Email</legend>
               <input 
+                className='email-input'
                 type="email" 
                 name='email' 
                 value={email}
@@ -81,9 +85,10 @@ const Login = ({auth}) => {
                 </div>
 
      
-          <div>
+          <div className='password-inputdiv'>
           <legend>Lösenord</legend>
              <input 
+               className='pass-input'
                type="password" 
                name='password' 
                value={password} 
@@ -95,7 +100,7 @@ const Login = ({auth}) => {
       
           <button 
             type="submit" 
-            className='button'>
+            className='login-knapp'>
             Logga in
         </button>
 
