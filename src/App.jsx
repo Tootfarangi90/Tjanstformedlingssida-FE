@@ -50,7 +50,7 @@ const [useToken, setuseToken] = useState(token)
               
             </Routes>
           
-    <Footer />
+    {/* <Footer /> */}
     </div>
   );
 }
