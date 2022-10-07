@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inconsolata&family=Stylish&display=swap');
+
+.annons-div {
+ width:50%;
+ margin: 0 auto;
+
+}
+
+
+
+.annons-input{
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    width: 100%;
+    padding-left: 10px;
+    margin:10px;
+    height: 40px;
+   
+    color: #0F292E;
+    border-radius: 2px;
+    transition: 0.5s;
+}
+.annons-text {
+    width:85%;
+    height:100%
+}
+
+.skapa-annons {
+    margin-right: 10px;
+    width: 65%;
+    height:40px;
+    border: 3px solid rgb(0, 0, 0);
+    color: #0F292E;
+    border-radius: 2px;
+    transition: 0.5s;
+    font-size: larger;
+    background: linear-gradient(
+      180deg,
+      rgba(34, 77, 80, 0.4) 5%,
+      rgba(255, 255, 255, 0.6) 90%
+    );
+}

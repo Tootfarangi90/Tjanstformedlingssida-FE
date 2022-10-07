@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom'
+import "./tjanster.css"
 
 const Tjänster = () => {
     const [category, setCategory] = useState('')
@@ -50,15 +51,15 @@ const Tjänster = () => {
 
 return (
 
-    <section id="form">
+    <section className="annons-div">
         <h1>Annonsera din tjänst här</h1>
     
     <form onSubmit={postAd}>
 
         <p>{message}</p>
-        <div className="input-group">
+        <div className="annons-child">
 
-            <input
+            <input className='annons-input'
             type="text" 
             name='category' 
             value={category} 
@@ -68,7 +69,7 @@ return (
 
         </div>
 
-            <input 
+            <input className='annons-input'
             type="text" 
             name='title' 
             value={title} 
@@ -76,9 +77,9 @@ return (
             onChange={titleChanged}
             />
 
-        <div className="input-group">
+        <div className='annons-input'>
 
-            <textarea type="text" 
+            <textarea type="text" className='annons-text'
             name='description' 
             value={description} 
             placeholder="Beskrivning"
@@ -87,9 +88,11 @@ return (
 
         </div>
 
-        <div className="input-group">
+        <div className='annons-input'>
 
-            <input type="number" 
+            <input
+            className='annons-input'
+             type="number" 
             name='price' 
             value={price} 
             placeholder="Pris"
@@ -98,7 +101,7 @@ return (
 
         </div>
 
-        <button className='button'>Skapa annons</button>
+        <button className='skapa-annons'>Skapa annons</button>
 
     </form>
 </section>
