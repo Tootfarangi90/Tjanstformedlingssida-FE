@@ -22,6 +22,10 @@ the page is hosted at heroku follow this link https://tjanster22.herokuapp.com/
 
 **Test technologies:**
 + Jestjs with React testing library
+
+**Other technologies:**
++ husky -pre commit
++ git actions
     
  <h3>Class Diagram over project developers<h3>
 
